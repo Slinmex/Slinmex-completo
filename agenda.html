@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Agendar consulta – Slinmex</title>
+  <meta name="description" content="Agenda online para consulta por videochamada." />
+  <meta name="robots" content="noindex,follow" />
+  <link rel="icon" href="/favicon.ico" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>.container{max-width:1100px}</style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+  <header class="bg-white border-b sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-2 no-underline hover:opacity-90">
+        <div class="h-9 w-9 rounded-xl bg-slate-900 text-white grid place-items-center font-bold">SX</div>
+        <span class="font-semibold">Slinmex</span>
+      </a>
+      <a href="/" class="text-sm hover:underline">Voltar ao site</a>
+    </div>
+  </header>
+
+  <main class="container mx-auto px-4 py-10">
+    <h1 class="text-3xl md:text-4xl font-extrabold">Agendar consulta online</h1>
+    <p class="mt-3 text-slate-600">Escolha o melhor dia e horário. A videochamada e a confirmação são enviadas automaticamente.</p>
+
+    <div class="mt-8 rounded-2xl border bg-white p-3 shadow">
+      <!-- Ajuste a URL para o seu evento/usuário do Calendly, se necessário -->
+      <div class="calendly-inline-widget"
+           data-url="https://calendly.com/drcarlosbiela/consulta-online"
+           style="min-width:320px;height:760px;"></div>
+    </div>
+  </main>
+
+  <footer class="border-t text-center text-xs text-slate-500 py-6">
+    © <span id="ano"></span> Slinmex — Todos os direitos reservados.
+  </footer>
+
+  <script>document.getElementById('ano').textContent = new Date().getFullYear()</script>
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+</body>
+</html>
