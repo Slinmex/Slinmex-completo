@@ -8,7 +8,6 @@
   <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
   <link rel="canonical" href="https://www.slinmex.com.br/" />
   <meta name="theme-color" content="#059669" />
-
   <!-- Open Graph -->
   <meta property="og:locale" content="pt_BR" />
   <meta property="og:type" content="website" />
@@ -17,16 +16,13 @@
   <meta property="og:description" content="Informações claras, elegibilidade e agendamento online (Calendly) ou contato via WhatsApp." />
   <meta property="og:url" content="https://www.slinmex.com.br/" />
   <meta property="og:image" content="https://www.slinmex.com.br/og-cover.jpg" />
-
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Slinmex – Atendimento médico" />
   <meta name="twitter:description" content="Agende online pelo Calendly ou fale no WhatsApp." />
   <meta name="twitter:image" content="https://www.slinmex.com.br/og-cover.jpg" />
-
   <link rel="icon" href="/favicon.ico" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-
   <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
@@ -34,8 +30,8 @@
     .glass{backdrop-filter:blur(8px);background:rgba(255,255,255,0.7)}
     .card{transition:transform .2s ease, box-shadow .2s ease}
     .card:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(2,6,23,.08)}
+    .modal-backdrop{position:fixed;inset:0;background:rgba(2,6,23,.55);backdrop-filter:blur(2px)}
   </style>
-
   <!-- Schema.org JSON-LD -->
   <script type="application/ld+json">
   {
@@ -59,7 +55,7 @@
   <!-- Topbar -->
   <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-200">
     <div class="container mx-auto px-4 py-3 flex items-center justify-between">
-      <a href="/" class="flex items-center gap-2 no-underline hover:opacity-90" aria-label="Página inicial">
+      <a href="/index.html" class="flex items-center gap-2 no-underline hover:opacity-90" aria-label="Página inicial">
         <div class="h-9 w-9 rounded-xl bg-slate-900 text-white grid place-items-center font-bold">SX</div>
         <span class="font-semibold">Slinmex</span>
       </a>
@@ -68,12 +64,12 @@
         <a href="#tratamentos" class="hover:text-slate-900">Tratamentos</a>
         <a href="#planos" class="hover:text-slate-900">Como trabalhamos</a>
         <a href="#enzimas" class="hover:text-slate-900">Enzimas</a>
-        <a href="/agenda.html" class="hover:text-slate-900">Agendar</a>
+        <a href="/pre-consulta.html" class="hover:text-slate-900">Agendar</a>
         <a href="#faq" class="hover:text-slate-900">FAQ</a>
         <a href="#contato" class="hover:text-slate-900">Contato</a>
       </nav>
       <div class="flex items-center gap-3">
-        <a id="btnCalendlyTop" class="hidden md:inline-flex items-center gap-2 rounded-2xl bg-emerald-600 px-4 py-2 text-white text-sm font-medium shadow hover:bg-emerald-700" target="_blank" rel="noopener">Agendar online</a>
+        <a id="btnAgendarTop" class="hidden md:inline-flex items-center gap-2 rounded-2xl bg-emerald-600 px-4 py-2 text-white text-sm font-medium shadow hover:bg-emerald-700" href="/pre-consulta.html">Agendar consulta</a>
         <a data-wa data-wa-text="Olá! Quero atendimento sobre Ozempic ou Mounjaro." data-wa-campaign="topo" target="_blank" rel="noopener" class="hidden md:inline-flex items-center gap-2 rounded-2xl border px-4 py-2 text-sm font-medium">WhatsApp</a>
         <button class="md:hidden inline-flex items-center justify-center h-9 w-9 rounded-lg border border-slate-200" aria-label="Abrir menu" id="menuBtn">☰</button>
       </div>
@@ -85,13 +81,12 @@
         <a href="#tratamentos" class="py-1">Tratamentos</a>
         <a href="#planos" class="py-1">Como trabalhamos</a>
         <a href="#enzimas" class="py-1">Enzimas</a>
-        <a href="/agenda.html" class="py-1">Agendar</a>
+        <a href="/pre-consulta.html" class="py-1">Agendar</a>
         <a href="#faq" class="py-1">FAQ</a>
         <a href="#contato" class="py-1">Contato</a>
-        <a id="btnCalendlyMobile" class="mt-2 inline-flex items-center justify-center rounded-2xl bg-emerald-600 px-4 py-2 text-white text-sm font-medium shadow hover:bg-emerald-700" target="_blank" rel="noopener">Agendar online</a>
+        <a id="btnAgendarMobile" class="mt-2 inline-flex items-center justify-center rounded-2xl bg-emerald-600 px-4 py-2 text-white text-sm font-medium shadow hover:bg-emerald-700" href="/pre-consulta.html">Agendar consulta</a>
         <a data-wa data-wa-text="Quero tirar dúvidas no WhatsApp" data-wa-campaign="topo-mobile" target="_blank" rel="noopener" class="inline-flex items-center justify-center rounded-2xl border px-4 py-2 text-sm font-medium">WhatsApp</a>
       </div>
-    </div>
     </div>
   </header>
 
@@ -103,7 +98,7 @@
         <h1 class="text-3xl md:text-5xl font-extrabold leading-tight">Acompanhamento médico para controle de peso</h1>
         <p class="mt-4 text-slate-600 md:text-lg">Atendimento humanizado com <strong>Ozempic (Semaglutida)</strong> e <strong>Mounjaro (Tirzepatida)</strong> quando indicado. Avaliamos se é seguro para você, explicamos o uso e acompanhamos a evolução.</p>
         <div class="mt-6 flex gap-3 flex-wrap">
-          <a id="btnCalendlyHero" class="rounded-2xl bg-emerald-600 px-5 py-3 text-white font-medium shadow hover:bg-emerald-700" target="_blank" rel="noopener">Agendar online</a>
+          <a class="rounded-2xl bg-emerald-600 px-5 py-3 text-white font-medium shadow hover:bg-emerald-700" href="/pre-consulta.html">Agendar consulta</a>
           <a data-wa data-wa-text="Quero avaliar minha elegibilidade" data-wa-campaign="hero-elig" target="_blank" rel="noopener" class="rounded-2xl border px-5 py-3 font-medium">Falar no WhatsApp</a>
         </div>
         <ul class="mt-6 text-sm text-slate-600 space-y-1">
@@ -130,7 +125,7 @@
             <li><span class="font-medium">2. Consulta</span> – videochamada e, se indicado, receita digital.</li>
             <li><span class="font-medium">3. Acompanhamento</span> – suporte pelo WhatsApp e revisões.</li>
           </ol>
-          <a id="btnCalendlyCard" class="mt-6 inline-flex items-center justify-center w-full rounded-2xl bg-emerald-600 px-5 py-3 text-white font-medium shadow hover:bg-emerald-700" target="_blank" rel="noopener">Começar agora</a>
+          <a class="mt-6 inline-flex items-center justify-center w-full rounded-2xl bg-emerald-600 px-5 py-3 text-white font-medium shadow hover:bg-emerald-700" href="/pre-consulta.html">Começar agora</a>
         </div>
       </div>
     </div>
@@ -161,58 +156,56 @@
       <h2 class="text-2xl md:text-3xl font-bold text-center">Tratamentos</h2>
       <p class="mt-3 text-center text-slate-600">Informações em linguagem simples. As doses e o esquema são definidos pelo médico, caso haja indicação.</p>
 
-      <div class="mt-10 grid md:grid-cols-2 gap-6">
-        <!-- Ozempic -->
-        <article class="card rounded-3xl bg-white border border-slate-200 shadow-sm p-6">
-          <div class="flex items-center justify-between">
-            <div class="flex items-center gap-3">
-              <!-- Ilustração caneta injetora -->
-              <span aria-hidden="true" class="inline-block h-10 w-10 rounded-xl bg-emerald-50 grid place-items-center">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M3 21l3-1 11-11-2-2L4 18 3 21z" stroke="#065f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M16 7l2-2 3 3-2 2" stroke="#065f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </span>
-              <h3 class="text-xl font-semibold text-slate-900">Ozempic (Semaglutida)</h3>
-            </div>
+    <div class="mt-10 grid md:grid-cols-2 gap-6">
+      <!-- Ozempic -->
+      <article class="card rounded-3xl bg-white border border-slate-200 shadow-sm p-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <span aria-hidden="true" class="inline-block h-10 w-10 rounded-xl bg-emerald-50 grid place-items-center">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 21l3-1 11-11-2-2L4 18 3 21z" stroke="#065f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16 7l2-2 3 3-2 2" stroke="#065f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <h3 class="text-xl font-semibold text-slate-900">Ozempic (Semaglutida)</h3>
           </div>
-          <p class="mt-2 text-sm text-slate-600">Ajuda a reduzir a fome e a melhorar o controle do açúcar no sangue. Aplicação semanal quando indicado.</p>
-          <ul class="mt-4 text-sm text-slate-700 space-y-2 list-disc list-inside">
-            <li><span class="font-medium">Objetivo:</span> apoiar o emagrecimento junto com plano alimentar e hábitos.</li>
-            <li><span class="font-medium">Como usa:</span> injeção abaixo da pele, com caneta.</li>
-            <li><span class="font-medium">Possíveis efeitos:</span> náusea, estômago cheio, azia (costumam melhorar com o tempo).</li>
-          </ul>
-          <div class="mt-6 flex gap-3">
-            <a id="btnCalendlyOze" class="rounded-2xl bg-emerald-600 px-4 py-2 text-white text-sm font-medium hover:bg-emerald-700" target="_blank" rel="noopener">Agendar avaliação</a>
-          </div>
-        </article>
+        </div>
+        <p class="mt-2 text-sm text-slate-600">Ajuda a reduzir a fome e a melhorar o controle do açúcar no sangue. Aplicação semanal quando indicado.</p>
+        <ul class="mt-4 text-sm text-slate-700 space-y-2 list-disc list-inside">
+          <li><span class="font-medium">Objetivo:</span> apoiar o emagrecimento junto com plano alimentar e hábitos.</li>
+          <li><span class="font-medium">Como usa:</span> injeção abaixo da pele, com caneta.</li>
+          <li><span class="font-medium">Possíveis efeitos:</span> náusea, estômago cheio, azia (costumam melhorar com o tempo).</li>
+        </ul>
+        <div class="mt-6 flex gap-3">
+          <a class="rounded-2xl bg-emerald-600 px-4 py-2 text-white text-sm font-medium hover:bg-emerald-700" href="/pre-consulta.html">Agendar avaliação</a>
+        </div>
+      </article>
 
-        <!-- Mounjaro -->
-        <article class="card rounded-3xl bg-white border border-slate-200 shadow-sm p-6">
-          <div class="flex items-center justify-between">
-            <div class="flex items-center gap-3">
-              <!-- Ilustração dupla via hormonal -->
-              <span aria-hidden="true" class="inline-block h-10 w-10 rounded-xl bg-emerald-50 grid place-items-center">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="8" cy="8" r="4" stroke="#065f46" stroke-width="1.5"/>
-                  <circle cx="16" cy="16" r="4" stroke="#065f46" stroke-width="1.5"/>
-                  <path d="M10 10l4 4" stroke="#065f46" stroke-width="1.5"/>
-                </svg>
-              </span>
-              <h3 class="text-xl font-semibold text-slate-900">Mounjaro (Tirzepatida)</h3>
-            </div>
+      <!-- Mounjaro -->
+      <article class="card rounded-3xl bg-white border border-slate-200 shadow-sm p-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <span aria-hidden="true" class="inline-block h-10 w-10 rounded-xl bg-emerald-50 grid place-items-center">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="8" cy="8" r="4" stroke="#065f46" stroke-width="1.5"/>
+                <circle cx="16" cy="16" r="4" stroke="#065f46" stroke-width="1.5"/>
+                <path d="M10 10l4 4" stroke="#065f46" stroke-width="1.5"/>
+              </svg>
+            </span>
+            <h3 class="text-xl font-semibold text-slate-900">Mounjaro (Tirzepatida)</h3>
           </div>
-          <p class="mt-2 text-sm text-slate-600">Atua em duas vias hormonais (GIP/GLP-1) e pode oferecer maior potência para algumas pessoas, mediante avaliação.</p>
-          <ul class="mt-4 text-sm text-slate-700 space-y-2 list-disc list-inside">
-            <li><span class="font-medium">Objetivo:</span> redução de peso e melhora glicêmica.</li>
-            <li><span class="font-medium">Como usa:</span> aplicação semanal sob a pele.</li>
-            <li><span class="font-medium">Possíveis efeitos:</span> semelhantes aos do Ozempic.</li>
-          </ul>
-          <div class="mt-6 flex gap-3">
-            <a id="btnCalendlyMou" class="rounded-2xl bg-emerald-600 px-4 py-2 text-white text-sm font-medium hover:bg-emerald-700" target="_blank" rel="noopener">Agendar avaliação</a>
-          </div>
-        </article>
-      </div>
+        </div>
+        <p class="mt-2 text-sm text-slate-600">Atua em duas vias hormonais (GIP/GLP-1) e pode oferecer maior potência para algumas pessoas, mediante avaliação.</p>
+        <ul class="mt-4 text-sm text-slate-700 space-y-2 list-disc list-inside">
+          <li><span class="font-medium">Objetivo:</span> redução de peso e melhora glicêmica.</li>
+          <li><span class="font-medium">Como usa:</span> aplicação semanal sob a pele.</li>
+          <li><span class="font-medium">Possíveis efeitos:</span> semelhantes aos do Ozempic.</li>
+        </ul>
+        <div class="mt-6 flex gap-3">
+          <a class="rounded-2xl bg-emerald-600 px-4 py-2 text-white text-sm font-medium hover:bg-emerald-700" href="/pre-consulta.html">Agendar avaliação</a>
+        </div>
+      </article>
+    </div>
     </div>
   </section>
 
@@ -224,7 +217,7 @@
 
       <div class="mt-10 grid md:grid-cols-2 gap-6">
         <!-- Adipo Balance -->
-        <article class="card relative rounded-3xl bg-white border border-slate-200 shadow-sm p-6">
+        <article class="card relative rounded-3xl bg-white border border-slate-200 shadow-sm p-6 cursor-pointer enzyme-card" data-enzyme="adipo" role="button" tabindex="0" aria-label="Abrir detalhes do Adipo Balance">
           <div class="flex items-start justify-between gap-4">
             <h3 class="text-xl font-semibold text-slate-900">Adipo Balance</h3>
             <span class="price inline-block rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-sm text-emerald-700" data-price="adipo"></span>
@@ -237,11 +230,6 @@
             </svg>
           </span>
           <p class="mt-2 text-sm text-slate-600">Para pernas e braços com <strong>inchaço e sensibilidade</strong> típicos dos estágios iniciais de lipedema. Ajuda na <strong>drenagem</strong> e na sensação de peso.</p>
-          <ul class="mt-4 text-sm text-slate-700 space-y-2 list-disc list-inside">
-            <li><span class="font-medium">Como é feito:</span> microaplicações superficiais na região tratada.</li>
-            <li><span class="font-medium">Ritmo:</span> 1 sessão/semana por 8–12 semanas.</li>
-            <li><span class="font-medium">Após a sessão:</span> evite sol/atrito por 48 h; roupas confortáveis.</li>
-          </ul>
           <div class="mt-5 flex flex-wrap gap-3">
             <a data-wa data-wa-text="Tenho interesse no Adipo Balance" data-wa-campaign="enzimas-adipo" target="_blank" rel="noopener" class="rounded-2xl border px-4 py-2 text-sm font-medium">WhatsApp</a>
             <span class="text-xs px-3 py-1 rounded-full bg-slate-100 text-slate-600">Aplicação em consultório</span>
@@ -249,7 +237,7 @@
         </article>
 
         <!-- Slim Shape Basis -->
-        <article class="card relative rounded-3xl bg-white border border-slate-200 shadow-sm p-6">
+        <article class="card relative rounded-3xl bg-white border border-slate-200 shadow-sm p-6 cursor-pointer enzyme-card" data-enzyme="slim" role="button" tabindex="0" aria-label="Abrir detalhes do Slim Shape Basis">
           <div class="flex items-start justify-between gap-4">
             <h3 class="text-xl font-semibold text-slate-900">Slim Shape Basis</h3>
             <span class="price inline-block rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-sm text-emerald-700" data-price="slim"></span>
@@ -262,11 +250,6 @@
             </svg>
           </span>
           <p class="mt-2 text-sm text-slate-600">Para <strong>gordura localizada</strong> em abdômen, flancos e costas. Contribui para o <strong>remodelamento</strong> ao longo das sessões.</p>
-          <ul class="mt-4 text-sm text-slate-700 space-y-2 list-disc list-inside">
-            <li><span class="font-medium">Como é feito:</span> microaplicações na camada de gordura da região alvo.</li>
-            <li><span class="font-medium">Ritmo:</span> sessões quinzenais por 8–12 semanas.</li>
-            <li><span class="font-medium">Cuidados:</span> pode haver sensibilidade/arroxeado por poucos dias.</li>
-          </ul>
           <div class="mt-5 flex flex-wrap gap-3">
             <a data-wa data-wa-text="Tenho interesse no Slim Shape Basis" data-wa-campaign="enzimas-slim" target="_blank" rel="noopener" class="rounded-2xl border px-4 py-2 text-sm font-medium">WhatsApp</a>
             <span class="text-xs px-3 py-1 rounded-full bg-slate-100 text-slate-600">Aplicação em consultório</span>
@@ -277,6 +260,30 @@
       <p class="mt-6 text-xs text-slate-500">Observação: indicação, número de sessões e intervalos variam conforme avaliação médica. Não fazemos promessas de resultado.</p>
     </div>
   </section>
+
+  <!-- Modal de Enzimas -->
+  <div id="enzymeModal" class="hidden" aria-hidden="true">
+    <div class="modal-backdrop grid place-items-center p-4">
+      <div class="relative w-full max-w-2xl rounded-2xl bg-white p-6 shadow-xl border border-slate-200">
+        <button id="closeModal" class="absolute right-3 top-3 h-9 w-9 grid place-items-center rounded-full border hover:bg-slate-50" aria-label="Fechar">✕</button>
+        <h3 id="enzymeTitle" class="text-xl font-semibold"></h3>
+        <p id="enzymeDesc" class="text-sm text-slate-600 mt-1"></p>
+
+        <h4 class="mt-5 text-sm font-semibold text-slate-800">Composição e função</h4>
+        <div id="enzymeList" class="mt-2 space-y-3"></div>
+
+        <h4 class="mt-5 text-sm font-semibold text-slate-800">Observações (via/ritmo/cuidados)</h4>
+        <ul id="enzymeObs" class="mt-2 list-disc list-inside text-sm text-slate-700 space-y-2"></ul>
+
+        <div class="mt-5 flex items-center justify-between gap-3">
+          <a id="enzymeWhats" class="rounded-2xl border px-4 py-2 text-sm font-medium" target="_blank" rel="noopener">Tirar dúvidas no WhatsApp</a>
+          <button id="closeModal2" class="rounded-2xl bg-emerald-600 px-4 py-2 text-white text-sm font-medium shadow hover:bg-emerald-700">Entendi</button>
+        </div>
+
+        <p class="mt-4 text-xs text-slate-500">Conteúdo informativo e não substitui avaliação médica presencial. Protocolos podem variar conforme o caso.</p>
+      </div>
+    </div>
+  </div>
 
   <!-- Como funciona -->
   <section id="como-funciona" class="py-16 md:py-24">
@@ -297,7 +304,7 @@
         </div>
       </div>
       <div class="text-center mt-8">
-        <a id="btnCalendlyComo" class="inline-flex rounded-2xl bg-emerald-600 px-6 py-3 text-white font-medium hover:bg-emerald-700" target="_blank" rel="noopener">Agendar consulta</a>
+        <a class="inline-flex rounded-2xl bg-emerald-600 px-6 py-3 text-white font-medium hover:bg-emerald-700" href="/pre-consulta.html">Agendar consulta</a>
       </div>
     </div>
   </section>
@@ -314,7 +321,7 @@
           <h3 class="text-xl font-semibold text-slate-900">Consulta online</h3>
           <p class="mt-2 text-sm text-slate-600">Avaliação por videochamada, revisão de exames e plano inicial.</p>
           <div class="mt-5">
-            <a id="btnCalendlyPlano1" class="rounded-2xl bg-emerald-600 px-4 py-2 text-white text-sm font-medium hover:bg-emerald-700" target="_blank" rel="noopener">Agendar</a>
+            <a class="rounded-2xl bg-emerald-600 px-4 py-2 text-white text-sm font-medium hover:bg-emerald-700" href="/pre-consulta.html">Agendar</a>
           </div>
         </article>
 
@@ -323,7 +330,7 @@
           <h3 class="text-xl font-semibold text-slate-900">Combo</h3>
           <p class="mt-2 text-sm text-slate-600">Avaliação, prescrição quando indicada, suporte na aquisição e acompanhamento.</p>
           <div class="mt-5">
-            <a id="btnCalendlyPlano2" class="rounded-2xl bg-emerald-600 px-4 py-2 text-white text-sm font-medium hover:bg-emerald-700" target="_blank" rel="noopener">Agendar</a>
+            <a class="rounded-2xl bg-emerald-600 px-4 py-2 text-white text-sm font-medium hover:bg-emerald-700" href="/pre-consulta.html">Agendar</a>
           </div>
         </article>
 
@@ -370,10 +377,10 @@
   <section id="contato" class="py-16 md:py-24">
     <div class="container mx-auto px-4 text-center">
       <h2 class="text-2xl md:text-3xl font-bold">Pronto para avaliar seu caso?</h2>
-      <p class="mt-3 text-slate-600">Escolha: agendar online ou falar no WhatsApp.</p>
+      <p class="mt-3 text-slate-600">Clique para preencher a pré-consulta e seguir para o agendamento.</p>
       <div class="mt-6 flex items-center justify-center gap-3 flex-wrap">
-        <a id="btnCalendlyCta" class="inline-flex items-center gap-2 rounded-2xl bg-emerald-600 px-6 py-3 text-white font-medium shadow hover:bg-emerald-700" target="_blank" rel="noopener">Agendar online</a>
-        <a data-wa data-wa-text="Olá, gostaria de agendar minha consulta online" data-wa-campaign="cta-final" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-2xl border px-6 py-3 font-medium">WhatsApp</a>
+        <a class="inline-flex items-center gap-2 rounded-2xl bg-emerald-600 px-6 py-3 text-white font-medium shadow hover:bg-emerald-700" href="/pre-consulta.html">Agendar consulta</a>
+        <a data-wa data-wa-text="Olá, gostaria de informações antes de agendar" data-wa-campaign="cta-final" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-2xl border px-6 py-3 font-medium">WhatsApp</a>
       </div>
       <p class="mt-3 text-xs text-slate-500">Seg–Sex, 08h–18h (Brasília).</p>
     </div>
@@ -395,30 +402,25 @@
     <div class="border-t text-center text-xs text-slate-500 py-4">© <span id="ano"></span> Slinmex — Todos os direitos reservados.</div>
   </footer>
 
-  <!-- Scripts -->
   <script>
-    // Redireciona APEX -> WWW (somente em http/https)
     (function () {
       var isHttp = location.protocol === 'http:' || location.protocol === 'https:';
-      if (!isHttp) return; // não redireciona em arquivo local (prévia)
+      if (!isHttp) return;
       var h = location.hostname;
       if (h && !h.startsWith('www.')) {
         location.replace(location.protocol + '//www.' + h + location.pathname + location.search + location.hash);
       }
     })();
 
-    // Ano no rodapé
     var anoEl = document.getElementById('ano');
     if (anoEl) anoEl.textContent = new Date().getFullYear();
 
-    // Menu mobile toggle
     var btn = document.getElementById('menuBtn');
     var menu = document.getElementById('mobileMenu');
     if (btn && menu) {
       btn.addEventListener('click', function () { menu.hidden = !menu.hidden; });
     }
 
-    // WhatsApp centralizado
     var WA_BASE = 'https://wa.me/5519997223709';
     function buildWa(text, campaign) {
       var p = new URLSearchParams();
@@ -434,7 +436,6 @@
       a.href = buildWa(text, campaign);
     });
 
-    // Preços (enzimas)
     var PRICES = { adipo: 79.90, slim: 110.00 };
     var br = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' });
     document.querySelectorAll('[data-price]').forEach(function(el){
@@ -444,11 +445,65 @@
       else el.textContent = 'Consulte';
     });
 
-    // Calendly centralizado (URL única)
-    var CALENDLY_URL = 'https://calendly.com/slinmex?utm_source=site&utm_medium=cta';
-    [
-      'btnCalendlyTop','btnCalendlyMobile','btnCalendlyHero','btnCalendlyCard','btnCalendlyComo','btnCalendlyPlano1','btnCalendlyPlano2','btnCalendlyOze','btnCalendlyMou','btnCalendlyCta'
-    ].forEach(function(id){ var el=document.getElementById(id); if(el) el.href = CALENDLY_URL; });
+    var ENZIMAS_INFO = {
+      adipo: {
+        title: "Adipo Balance",
+        desc: "Auxilia no manejo do lipedema (estágios 1–2), com foco em drenagem linfática, redução de dor e sensação de peso nas extremidades. Não visa reduzir o volume de gordura do lipedema.",
+        componentes: [
+          { nome: "Benzopirona", papel: "Derivado da cumarina com ação proteolítica, linfocinética e vasodilatadora. Favorece a reabsorção do edema e otimiza a drenagem linfática." },
+          { nome: "Troxerrutina", papel: "Ativo venotônico e capilar-protetor, com ação linfocinética. Melhora o fluxo sanguíneo, reduz a permeabilidade vascular e o edema." },
+          { nome: "Trissilinol (silício orgânico)", papel: "Ativa a lipólise e estimula fibras elásticas e colágenas (remodelamento dérmico); pode auxiliar no aspecto da pele." },
+          { nome: "Curcumina", papel: "Polifenol com ação antioxidante e anti-inflamatória; pode modular diferenciação de adipócitos." },
+          { nome: "D-Pantenol (pró-vitamina B5)", papel: "Umectante com efeitos antioxidantes e reparadores; favorece regeneração celular." }
+        ],
+        observacoes: [
+          "Via: microaplicações superficiais em pontos da região tratada (em consultório).",
+          "Ritmo: geralmente 1 sessão por semana, por 8–12 semanas (ajustado à resposta).",
+          "Cuidados: evitar sol/atrito por 48 h; preferir roupas confortáveis; manter hidratação.",
+          "Sintomas leves (ardor/sensibilidade/pontos arroxeados) podem ocorrer e tendem a ceder em poucos dias.",
+          "Este protocolo visa conforto e drenagem; não tem objetivo de reduzir o volume da gordura do lipedema."
+        ]
+      },
+      slim: {
+        title: "Slim Shape Basis",
+        desc: "Voltado a gordura localizada, com ativos de ação lipolítica e suporte à circulação local. Indicado para panículos adiposos maiores.",
+        componentes: [
+          { nome: "Desoxicolato de sódio", papel: "Agente detergente que emulsiona membranas dos adipócitos, levando à necrose gordurosa e remodelamento local." },
+          { nome: "Hialuronidase", papel: "Enzima que aumenta a permeação tecidual, melhorando a difusão e reabsorção de edema." },
+          { nome: "Tripeptídeo-41", papel: "Peptídeo associado à estimulação de vias de lipólise, auxiliando na redução de gordura localizada." },
+          { nome: "Troxerrutina", papel: "Venotônico/capilar-protetor com ação linfocinética; ajuda a reduzir edema e a evitar fibrose." },
+          { nome: "Benzopirona", papel: "Auxilia drenagem linfática e reabsorção de edema, com efeitos linfocinéticos e vasodilatadores." },
+          { nome: "Procaína", papel: "Efeito vasodilatador local; pode prolongar a ação de outros componentes do protocolo." }
+        ],
+        observacoes: [
+          "Via: microaplicações na camada de gordura da região alvo (em consultório).",
+          "Ritmo: geralmente sessões a cada 14 dias, por 8–12 semanas (ajustável conforme resposta).",
+          "Cuidados: é comum sensibilidade/edema/hematomas leves por 2–5 dias; evitar calor intenso e exercícios extenuantes por 24–48 h.",
+          "Hidratação e medidas de conforto são recomendadas; em caso de desconforto relevante, alinhar conduta com a equipe.",
+          "Protocolos lipolíticos não substituem hábitos saudáveis e acompanhamento clínico."
+        ]
+      }
+    };
+
+    var modal = document.getElementById('enzymeModal');
+    var modalTitle = document.getElementById('enzymeTitle');
+    var modalDesc = document.getElementById('enzymeDesc');
+    var modalList = document.getElementById('enzymeList');
+    var modalObs = document.getElementById('enzymeObs');
+    var modalWA = document.getElementById('enzymeWhats');
+    function openModal(key){
+      var d = ENZIMAS_INFO[key];
+      if(!d) return;
+      modalTitle.textContent = d.title || '';
+      modalDesc.textContent = d.desc || '';
+      modalList.innerHTML = '';
+      (d.componentes || []).forEach(function(it){
+        var div = document.createElement('div');
+        div.className = 'rounded-xl border p-3';
+        div.innerHTML = '<div class="text-sm font-medium>'+ (it.nome||'Componente') +'</div><div class="text-sm text-slate-600 mt-1>'+ (it.papel||'—') +'</div>';
+      });
+      // corrected append:
+    }
   </script>
 </body>
 </html>
