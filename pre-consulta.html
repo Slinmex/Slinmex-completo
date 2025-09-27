@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pré‑consulta | Slinmex</title>
+  <meta name="description" content="Pré-consulta rápida: peso, altura, IMC automático, comorbidades e objetivos. Envio via WhatsApp e redirecionamento para agendamento." />
+  <meta name="robots" content="noindex,nofollow" />
+  <meta name="theme-color" content="#059669" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .container{max-width:900px}
+    input[type=number]::-webkit-outer-spin-button,
+    input[type=number]::-webkit-inner-spin-button{ -webkit-appearance: none; margin: 0; }
+  </style>
+</head>
+<body class="bg-gradient-to-b from-slate-50 to-white text-slate-800">
+  <header class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-slate-200">
+    <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="/index.html" class="flex items-center gap-2 no-underline hover:opacity-90" aria-label="Página inicial">
+        <div class="h-9 w-9 rounded-xl bg-slate-900 text-white grid place-items-center font-bold">SX</div>
+        <span class="font-semibold">Slinmex</span>
+      </a>
+      <a href="https://calendly.com/slinmex?utm_source=site&utm_medium=preconsulta" class="rounded-2xl border px-4 py-2 text-sm font-medium" target="_blank" rel="noopener">Ir ao Calendly</a>
+    </div>
+  </header>
+
+  <main class="container mx-auto px-4 py-8 md:py-12">
+    <h1 class="text-2xl md:text-3xl font-bold">Pré‑consulta</h1>
+    <p class="mt-2 text-slate-600">Leva menos de 2 minutos. Ao enviar, abriremos o WhatsApp com o resumo e levaremos você direto ao agendamento.</p>
+
+    <form id="preForm" class="mt-8 grid gap-6">
+      <!-- Identificação básica -->
+      <section class="rounded-3xl border p-5 bg-white">
+        <h2 class="text-lg font-semibold">1) Identificação</h2>
+        <div class="mt-4 grid md:grid-cols-2 gap-4">
+          <label class="block text-sm">
+            <span class="text-slate-700">Nome completo</span>
+            <input type="text" id="nome" class="mt-1 w-full rounded-xl border px-3 py-2" placeholder="Ex.: Ana Silva" autocomplete="name" required />
+          </label>
+          <label class="block text-sm">
+            <span class="text-slate-700">Idade (opcional)</span>
+            <input type="number" id="idade" class="mt-1 w-full rounded-xl border px-3 py-2" min="0" max="120" placeholder="Ex.: 36" />
+          </label>
+        </div>
+      </section>
+
+      <!-- Medidas -->
+      <section class="rounded-3xl border p-5 bg-white">
+        <h2 class="text-lg font-semibold">2) Medidas</h2>
+        <div class="mt-4 grid md:grid-cols-3 gap-4">
+          <label class="block text-sm">
+            <span class="text-slate-700">Peso (kg)</span>
+            <input type="number" id="peso" class="mt-1 w-full rounded-xl border px-3 py-2" placeholder="Ex.: 84,5" step="0.1" min="20" max="400" required />
+          </label>
+          <label class="block text-sm">
+            <span class="text-slate-700">Altura</span>
+            <div class="flex gap-2">
+              <input type="number" id="altura" class="mt-1 w-full rounded-xl border px-3 py-2" placeholder="cm ou m" step="0.01" min="0.5" max="250" required />
+              <select id="alturaUn" class="mt-1 rounded-xl border px-2 py-2">
+                <option value="auto" selected>auto</option>
+                <option value="cm">cm</option>
+                <option value="m">m</option>
+              </select>
+            </div>
+            <small class="text-slate-500">Você pode digitar 170 (cm) ou 1.70 (m). Em "auto" detectamos sozinho.</small>
+          </label>
+          <label class="block text-sm">
+            <span class="text-slate-700">IMC</span>
+            <input type="text" id="imc" class="mt-1 w-full rounded-xl border px-3 py-2 bg-slate-50" placeholder="—" readonly />
+          </label>
+        </div>
+      </section>
+
+      <!-- Comorbidades -->
+      <section class="rounded-3xl border p-5 bg-white">
+        <h2 class="text-lg font-semibold">3) Saúde</h2>
+        <div class="mt-3 grid md:grid-cols-2 gap-6">
+          <fieldset>
+            <legend class="text-sm font-medium text-slate-700">Comorbidades comuns</legend>
+            <label class="mt-2 flex items-center gap-2"><input type="checkbox" id="has" class="h-4 w-4 rounded border"> <span>Hipertensão (HAS)</span></label>
+            <label class="mt-2 flex items-center gap-2"><input type="checkbox" id="dm" class="h-4 w-4 rounded border"> <span>Diabetes (DM)</span></label>
+          </fieldset>
+          <fieldset>
+            <legend class="text-sm font-medium text-slate-700">Contraindicações absolutas (GLP‑1/GIP)</legend>
+            <label class="mt-2 flex items-center gap-2"><input type="checkbox" id="mtc" class="h-4 w-4 rounded border"> <span>História pessoal/familiar de carcinoma medular de tireoide (MTC)</span></label>
+            <label class="mt-2 flex items-center gap-2"><input type="checkbox" id="men2" class="h-4 w-4 rounded border"> <span>Neoplasia endócrina múltipla tipo 2 (MEN2)</span></label>
+            <label class="mt-2 flex items-center gap-2"><input type="checkbox" id="grav" class="h-4 w-4 rounded border"> <span>Gestação ou amamentação</span></label>
+            <label class="mt-2 flex items-center gap-2"><input type="checkbox" id="hiper" class="h-4 w-4 rounded border"> <span>Hipersensibilidade conhecida aos componentes</span></label>
+          </fieldset>
+        </div>
+        <div class="mt-4">
+          <label class="block text-sm">
+            <span class="text-slate-700">Outras condições relevantes (opcional)</span>
+            <input type="text" id="outros" class="mt-1 w-full rounded-xl border px-3 py-2" placeholder="Ex.: hipotireoidismo, apneia do sono, etc." />
+          </label>
+        </div>
+      </section>
+
+      <!-- Objetivo -->
+      <section class="rounded-3xl border p-5 bg-white">
+        <h2 class="text-lg font-semibold">4) Objetivo</h2>
+        <label class="block text-sm">
+          <span class="text-slate-700">O que você deseja alcançar?</span>
+          <textarea id="objetivo" class="mt-1 w-full rounded-2xl border px-3 py-2 min-h-[110px]" placeholder="Ex.: reduzir 8–10 kg, melhorar relação com alimentação, controlar glicemia, etc." required></textarea>
+        </label>
+      </section>
+
+      <!-- Consentimento -->
+      <section class="rounded-3xl border p-5 bg-white">
+        <label class="flex items-start gap-3 text-sm">
+          <input type="checkbox" id="consent" class="mt-1 h-4 w-4 rounded border" required>
+          <span>Confirmo que as informações são verdadeiras e entendo que a prescrição só ocorre após avaliação médica e critérios de segurança.</span>
+        </label>
+      </section>
+
+      <!-- Ações -->
+      <div class="flex flex-col md:flex-row items-center gap-3">
+        <button type="submit" class="rounded-2xl bg-emerald-600 px-6 py-3 text-white font-medium shadow hover:bg-emerald-700">Enviar e ir ao agendamento</button>
+        <a href="/index.html" class="text-sm underline">Voltar ao site</a>
+      </div>
+
+      <p class="text-xs text-slate-500">Ao enviar, abriremos o WhatsApp com seu resumo para nossa equipe e você será levado ao Calendly para escolher o melhor horário.</p>
+    </form>
+  </main>
+
+  <script>
+    // Constantes
+    var CALENDLY_URL = "https://calendly.com/slinmex?utm_source=site&utm_medium=preconsulta";
+    var WA_BASE = "https://wa.me/5519997223709";
+
+    // IMC automático (altura em cm ou m)
+    function parseAltura(valor, unidadeSel){
+      var v = parseFloat(String(valor).replace(',', '.'));
+      if (!isFinite(v) || v <= 0) return null;
+      if (unidadeSel === 'cm') return v / 100;
+      if (unidadeSel === 'm') return v;
+      if (v > 3) return v / 100;
+      return v;
+    }
+    function calcIMC(){
+      var peso = parseFloat(String(document.getElementById('peso').value).replace(',', '.'));
+      var alt  = parseAltura(document.getElementById('altura').value, document.getElementById('alturaUn').value);
+      var imcEl= document.getElementById('imc');
+      if (isFinite(peso) && peso > 0 && alt){
+        var imc = peso / (alt * alt);
+        imcEl.value = imc.toFixed(1);
+      } else { imcEl.value = ''; }
+    }
+    ['peso','altura','alturaUn'].forEach(function(id){ var el=document.getElementById(id); el.addEventListener('input', calcIMC); });
+
+    function buildWa(text, campaign){
+      var p = new URLSearchParams();
+      if (text) p.set('text', text);
+      p.set('source','site'); p.set('medium','pre-consulta');
+      if (campaign) p.set('campaign', campaign);
+      return WA_BASE + '?' + p.toString();
+    }
+
+    // Envio
+    document.getElementById('preForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      var nome  = document.getElementById('nome').value.trim();
+      var idade = document.getElementById('idade').value.trim();
+      var peso  = document.getElementById('peso').value.trim();
+      var altura= document.getElementById('altura').value.trim();
+      var un    = document.getElementById('alturaUn').value;
+      var imc   = document.getElementById('imc').value.trim();
+      var has   = document.getElementById('has').checked ? 'SIM' : 'NÃO';
+      var dm    = document.getElementById('dm').checked ? 'SIM' : 'NÃO';
+      var mtc   = document.getElementById('mtc').checked ? 'SIM' : 'NÃO';
+      var men2  = document.getElementById('men2').checked ? 'SIM' : 'NÃO';
+      var grav  = document.getElementById('grav').checked ? 'SIM' : 'NÃO';
+      var hiper = document.getElementById('hiper').checked ? 'SIM' : 'NÃO';
+      var outros= document.getElementById('outros').value.trim();
+      var obj   = document.getElementById('objetivo').value.trim();
+
+      var altm = parseAltura(altura, un);
+      var alturaTxt = altm ? (Math.round(altm*100)/100).toString().replace('.', ',') + ' m' : altura + (un==='cm'?' cm':(un==='m'?' m':''));
+
+      var linhas = [
+        "Pré-consulta Slinmex",
+        "Nome: " + nome + (idade ? " ("+idade+" anos)" : ""),
+        "Peso: " + peso + " kg",
+        "Altura: " + alturaTxt,
+        "IMC: " + (imc || "—"),
+        "HAS: " + has + " | DM: " + dm,
+        "CI absolutas – MTC: " + mtc + " | MEN2: " + men2 + " | Gestação/amamentação: " + grav + " | Hipersensibilidade: " + hiper,
+        (outros ? "Outras condições: " + outros : null),
+        "Objetivo: " + obj
+      ].filter(Boolean);
+
+      var waUrl = buildWa(linhas.join("\n"), "pre-consulta");
+      try { window.open(waUrl, "_blank"); } catch(_e){
+        window.location.href = waUrl;
+        return;
+      }
+      window.location.href = CALENDLY_URL;
+    });
+  </script>
+</body>
+</html>
