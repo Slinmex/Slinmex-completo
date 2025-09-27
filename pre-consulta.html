@@ -83,7 +83,7 @@
             <label class="mt-2 flex items-center gap-2"><input type="checkbox" id="mtc" class="h-4 w-4 rounded border"> <span>História pessoal/familiar de carcinoma medular de tireoide (MTC)</span></label>
             <label class="mt-2 flex items-center gap-2"><input type="checkbox" id="men2" class="h-4 w-4 rounded border"> <span>Neoplasia endócrina múltipla tipo 2 (MEN2)</span></label>
             <label class="mt-2 flex items-center gap-2"><input type="checkbox" id="grav" class="h-4 w-4 rounded border"> <span>Gestação ou amamentação</span></label>
-            <label class="mt-2 flex items-center gap-2"><input type="checkbox" id="hiper" class="h-4 w-4 rounded border"> <span>Hipersensibilidade conhecida aos componentes</span></label>
+            <label class="mt-2 flex items-center gap-2"><input type="checkbox" id="hiper" class="h-4 w-4 rounded border"> <span>Hipersensibilidade aos componentes</span></label>
           </fieldset>
         </div>
         <div class="mt-4">
@@ -186,7 +186,7 @@
         window.location.href = waUrl;
         return;
       }
-      window.location.href = CALENDLY_URL;
+      setTimeout(function(){ window.location.href = CALENDLY_URL; }, 800);
     });
   </script>
 </body>
