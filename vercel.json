@@ -1,9 +1,9 @@
 {
-  "redirects": [
+  "version": 2,
+  "routes": [
     {
-      "source": "/(.*)",
-      "destination": "https://www.slinmex.com.br/$1",
-      "permanent": true
+      "src": "/(.*)",
+      "dest": "/index.html"
     }
   ]
 }
