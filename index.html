@@ -68,6 +68,7 @@
         <a href="#tratamentos" class="hover:text-slate-900">Tratamentos</a>
         <a href="#planos" class="hover:text-slate-900">Como trabalhamos</a>
         <a href="#enzimas" class="hover:text-slate-900">Enzimas</a>
+        <a href="/agenda.html" class="hover:text-slate-900">Agendar</a>
         <a href="#faq" class="hover:text-slate-900">FAQ</a>
         <a href="#contato" class="hover:text-slate-900">Contato</a>
       </nav>
@@ -84,11 +85,13 @@
         <a href="#tratamentos" class="py-1">Tratamentos</a>
         <a href="#planos" class="py-1">Como trabalhamos</a>
         <a href="#enzimas" class="py-1">Enzimas</a>
+        <a href="/agenda.html" class="py-1">Agendar</a>
         <a href="#faq" class="py-1">FAQ</a>
         <a href="#contato" class="py-1">Contato</a>
         <a id="btnCalendlyMobile" class="mt-2 inline-flex items-center justify-center rounded-2xl bg-emerald-600 px-4 py-2 text-white text-sm font-medium shadow hover:bg-emerald-700" target="_blank" rel="noopener">Agendar online</a>
         <a data-wa data-wa-text="Quero tirar dúvidas no WhatsApp" data-wa-campaign="topo-mobile" target="_blank" rel="noopener" class="inline-flex items-center justify-center rounded-2xl border px-4 py-2 text-sm font-medium">WhatsApp</a>
       </div>
+    </div>
     </div>
   </header>
 
@@ -110,7 +113,17 @@
         </ul>
       </div>
       <div class="md:justify-self-end">
-        <div class="glass rounded-3xl p-6 shadow-xl border border-slate-200">
+        <div class="glass relative rounded-3xl p-6 shadow-xl border border-slate-200 overflow-hidden">
+          <!-- Ilustração leve no canto (decorativa) -->
+          <span aria-hidden="true" class="absolute -right-4 -top-4 opacity-15 rotate-6">
+            <svg width="140" height="140" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="20" y="30" width="160" height="110" rx="16" stroke="#065f46" stroke-width="3"/>
+              <circle cx="60" cy="75" r="18" stroke="#065f46" stroke-width="3"/>
+              <rect x="95" y="60" width="65" height="10" rx="5" stroke="#065f46" stroke-width="3"/>
+              <rect x="95" y="80" width="80" height="10" rx="5" stroke="#065f46" stroke-width="3"/>
+              <rect x="40" y="115" width="120" height="10" rx="5" stroke="#065f46" stroke-width="3"/>
+            </svg>
+          </span>
           <h3 class="text-lg font-semibold">Inicie em 3 passos</h3>
           <ol class="mt-4 space-y-3 text-sm">
             <li><span class="font-medium">1. Triagem</span> – questionário simples de saúde.</li>
@@ -152,7 +165,16 @@
         <!-- Ozempic -->
         <article class="card rounded-3xl bg-white border border-slate-200 shadow-sm p-6">
           <div class="flex items-center justify-between">
-            <h3 class="text-xl font-semibold text-slate-900">Ozempic (Semaglutida)</h3>
+            <div class="flex items-center gap-3">
+              <!-- Ilustração caneta injetora -->
+              <span aria-hidden="true" class="inline-block h-10 w-10 rounded-xl bg-emerald-50 grid place-items-center">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 21l3-1 11-11-2-2L4 18 3 21z" stroke="#065f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M16 7l2-2 3 3-2 2" stroke="#065f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <h3 class="text-xl font-semibold text-slate-900">Ozempic (Semaglutida)</h3>
+            </div>
           </div>
           <p class="mt-2 text-sm text-slate-600">Ajuda a reduzir a fome e a melhorar o controle do açúcar no sangue. Aplicação semanal quando indicado.</p>
           <ul class="mt-4 text-sm text-slate-700 space-y-2 list-disc list-inside">
@@ -168,7 +190,17 @@
         <!-- Mounjaro -->
         <article class="card rounded-3xl bg-white border border-slate-200 shadow-sm p-6">
           <div class="flex items-center justify-between">
-            <h3 class="text-xl font-semibold text-slate-900">Mounjaro (Tirzepatida)</h3>
+            <div class="flex items-center gap-3">
+              <!-- Ilustração dupla via hormonal -->
+              <span aria-hidden="true" class="inline-block h-10 w-10 rounded-xl bg-emerald-50 grid place-items-center">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="8" cy="8" r="4" stroke="#065f46" stroke-width="1.5"/>
+                  <circle cx="16" cy="16" r="4" stroke="#065f46" stroke-width="1.5"/>
+                  <path d="M10 10l4 4" stroke="#065f46" stroke-width="1.5"/>
+                </svg>
+              </span>
+              <h3 class="text-xl font-semibold text-slate-900">Mounjaro (Tirzepatida)</h3>
+            </div>
           </div>
           <p class="mt-2 text-sm text-slate-600">Atua em duas vias hormonais (GIP/GLP-1) e pode oferecer maior potência para algumas pessoas, mediante avaliação.</p>
           <ul class="mt-4 text-sm text-slate-700 space-y-2 list-disc list-inside">
@@ -365,10 +397,12 @@
 
   <!-- Scripts -->
   <script>
-    // Redireciona APEX -> WWW
+    // Redireciona APEX -> WWW (somente em http/https)
     (function () {
+      var isHttp = location.protocol === 'http:' || location.protocol === 'https:';
+      if (!isHttp) return; // não redireciona em arquivo local (prévia)
       var h = location.hostname;
-      if (!h.startsWith('www.')) {
+      if (h && !h.startsWith('www.')) {
         location.replace(location.protocol + '//www.' + h + location.pathname + location.search + location.hash);
       }
     })();
