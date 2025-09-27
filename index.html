@@ -69,6 +69,7 @@
       <nav class="hidden md:flex items-center gap-6 text-sm" role="navigation" aria-label="Navegação principal">
         <a href="#sobre" class="hover:text-slate-900">Sobre</a>
         <a href="#tratamentos" class="hover:text-slate-900">Tratamentos</a>
+        <a href="/agenda" class="hover:text-slate-900">Agendar</a>
         <a href="#planos" class="hover:text-slate-900">Como trabalhamos</a>
         <a href="#enzimas" class="hover:text-slate-900">Enzimas</a>
         <a href="#como-funciona" class="hover:text-slate-900">Como funciona</a>
@@ -77,6 +78,7 @@
       </nav>
       <div class="flex items-center gap-3">
         <a data-wa data-wa-text="Olá, tenho interesse em atendimento para Semaglutida ou Tirzepatida." data-wa-campaign="topo" target="_blank" rel="noopener noreferrer" class="hidden md:inline-flex items-center gap-2 rounded-2xl bg-emerald-600 px-4 py-2 text-white text-sm font-medium shadow hover:bg-emerald-700">Falar no WhatsApp</a>
+        <a href="#" data-agendar class="hidden md:inline-flex items-center gap-2 rounded-2xl border px-4 py-2 text-sm font-medium hover:bg-slate-50">Agendar</a>
         <button class="md:hidden inline-flex items-center justify-center h-9 w-9 rounded-lg border border-slate-200" aria-label="Abrir menu" id="menuBtn">☰</button>
       </div>
     </div>
@@ -85,12 +87,16 @@
       <div class="container mx-auto px-4 py-3 flex flex-col gap-3 text-sm">
         <a href="#sobre" class="py-1">Sobre</a>
         <a href="#tratamentos" class="py-1">Tratamentos</a>
+        <a href="/agenda" class="py-1">Agendar</a>
         <a href="#planos" class="py-1">Como trabalhamos</a>
         <a href="#enzimas" class="py-1">Enzimas</a>
         <a href="#como-funciona" class="py-1">Como funciona</a>
         <a href="#faq" class="py-1">FAQ</a>
         <a href="#contato" class="py-1">Contato</a>
-        <a data-wa data-wa-text="Olá, tenho interesse em atendimento para Semaglutida ou Tirzepatida." data-wa-campaign="topo-mobile" target="_blank" rel="noopener noreferrer" class="mt-2 inline-flex items-center justify-center rounded-2xl bg-emerald-600 px-4 py-2 text-white text-sm font-medium shadow hover:bg-emerald-700">Falar no WhatsApp</a>
+        <div class="flex gap-2 pt-2">
+          <a data-wa data-wa-text="Olá, tenho interesse em atendimento para Semaglutida ou Tirzepatida." data-wa-campaign="topo-mobile" target="_blank" rel="noopener noreferrer" class="flex-1 inline-flex items-center justify-center rounded-2xl bg-emerald-600 px-4 py-2 text-white text-sm font-medium shadow hover:bg-emerald-700">WhatsApp</a>
+          <a href="#" data-agendar class="flex-1 inline-flex items-center justify-center rounded-2xl border px-4 py-2 text-sm font-medium hover:bg-slate-50">Agendar</a>
+        </div>
       </div>
     </div>
   </header>
@@ -105,6 +111,7 @@
         <div class="mt-6 flex gap-3">
           <a data-wa data-wa-text="Quero avaliar minha elegibilidade para tratamento" data-wa-campaign="hero-elig" target="_blank" rel="noopener noreferrer" class="rounded-2xl bg-emerald-600 px-5 py-3 text-white font-medium shadow hover:bg-emerald-700">Avaliar elegibilidade</a>
           <a href="#tratamentos" class="rounded-2xl border px-5 py-3 font-medium hover:bg-slate-50">Ver tratamentos</a>
+          <a href="#" data-agendar class="rounded-2xl border px-5 py-3 font-medium bg-emerald-600 text-white hover:bg-emerald-700">Agendar consulta</a>
         </div>
         <ul class="mt-6 text-sm text-slate-600 space-y-1">
           <li>• Consulta online com médico</li>
@@ -120,7 +127,10 @@
             <li><span class="font-medium">2. Consulta</span> – videochamada para avaliação e prescrição se indicado.</li>
             <li><span class="font-medium">3. Acompanhamento</span> – seguimento e suporte pelo WhatsApp.</li>
           </ol>
-          <a data-wa data-wa-text="Quero iniciar os 3 passos" data-wa-campaign="hero-card" target="_blank" rel="noopener noreferrer" class="mt-6 inline-flex items-center justify-center w-full rounded-2xl bg-emerald-600 px-5 py-3 text-white font-medium shadow hover:bg-emerald-700">Começar agora</a>
+          <div class="mt-6 grid grid-cols-2 gap-2">
+            <a data-wa data-wa-text="Quero iniciar os 3 passos" data-wa-campaign="hero-card" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-full rounded-2xl bg-emerald-600 px-5 py-3 text-white font-medium shadow hover:bg-emerald-700">WhatsApp</a>
+            <a href="#" data-agendar class="inline-flex items-center justify-center w-full rounded-2xl border px-5 py-3 font-medium hover:bg-slate-50">Agendar</a>
+          </div>
         </div>
       </div>
     </div>
@@ -145,14 +155,14 @@
     </div>
   </section>
 
-  <!-- Tratamentos -->
+  <!-- Tratamentos (Semaglutida / Tirzepatida) -->
   <section id="tratamentos" class="py-16 md:py-24 bg-slate-50">
     <div class="container mx-auto px-4">
       <h2 class="text-2xl md:text-3xl font-bold text-center">Tratamentos</h2>
       <p class="mt-3 text-center text-slate-600">Informações resumidas. As doses e esquemas são definidos pelo médico conforme cada caso.</p>
 
       <div class="mt-10 grid md:grid-cols-2 gap-6">
-        <!-- Semaglutida -->
+        <!-- Ozempic (Semaglutida) -->
         <article class="card rounded-3xl bg-white border border-slate-200 shadow-sm p-6">
           <div class="flex items-center justify-between">
             <h3 class="text-xl font-semibold text-slate-900">Semaglutida</h3>
@@ -164,10 +174,13 @@
             <li>Via: subcutânea, caneta injetora.</li>
             <li>Efeitos comuns: náusea, plenitude gástrica, refluxo (geralmente transitórios).</li>
           </ul>
-          <a data-wa data-wa-text="Tenho interesse em Semaglutida" data-wa-campaign="produto-semaglutida" target="_blank" rel="noopener noreferrer" class="mt-6 inline-flex rounded-2xl bg-emerald-600 px-4 py-2 text-white text-sm font-medium hover:bg-emerald-700">Falar sobre Semaglutida</a>
+          <div class="mt-5 flex gap-2">
+            <a data-wa data-wa-text="Tenho interesse em Semaglutida" data-wa-campaign="produto-semaglutida" target="_blank" rel="noopener noreferrer" class="rounded-2xl bg-emerald-600 px-4 py-2 text-white text-sm font-medium hover:bg-emerald-700">WhatsApp</a>
+            <a href="#" data-agendar class="rounded-2xl border px-4 py-2 text-sm font-medium hover:bg-slate-50">Agendar</a>
+          </div>
         </article>
 
-        <!-- Tirzepatida -->
+        <!-- Semaglutida (Tirzepatida) -->
         <article class="card rounded-3xl bg-white border border-slate-200 shadow-sm p-6">
           <div class="flex items-center justify-between">
             <h3 class="text-xl font-semibold text-slate-900">Tirzepatida</h3>
@@ -177,15 +190,18 @@
           <ul class="mt-4 text-sm text-slate-700 space-y-2 list-disc list-inside">
             <li>Objetivo: redução de peso e melhora glicêmica.</li>
             <li>Via: subcutânea, semanal.</li>
-            <li>Efeitos comuns: semelhantes aos dos agonistas GLP-1.</li>
+            <li>Efeitos comuns: náusea, plenitude gástrica, refluxo (geralmente transitórios) .</li>
           </ul>
-          <a data-wa data-wa-text="Tenho interesse em Tirzepatida" data-wa-campaign="produto-tirzepatida" target="_blank" rel="noopener noreferrer" class="mt-6 inline-flex rounded-2xl bg-emerald-600 px-4 py-2 text-white text-sm font-medium hover:bg-emerald-700">Falar sobre Tirzepatida</a>
+          <div class="mt-5 flex gap-2">
+            <a data-wa data-wa-text="Tenho interesse em Tirzepatida" data-wa-campaign="produto-tirzepatida" target="_blank" rel="noopener noreferrer" class="rounded-2xl bg-emerald-600 px-4 py-2 text-white text-sm font-medium hover:bg-emerald-700">WhatsApp</a>
+            <a href="#" data-agendar class="rounded-2xl border px-4 py-2 text-sm font-medium hover:bg-slate-50">Agendar</a>
+          </div>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- Enzimas -->
+  <!-- Enzimas (leigo + preço destacado) -->
   <section id="enzimas" class="py-16 md:py-24">
     <div class="container mx-auto px-4">
       <h2 class="text-2xl md:text-3xl font-bold text-center">Enzimas corporais</h2>
@@ -206,6 +222,7 @@
           </ul>
           <div class="mt-5 flex flex-wrap gap-3">
             <a data-wa data-wa-text="Tenho interesse no Adipo Balance" data-wa-campaign="enzimas-adipo" target="_blank" rel="noopener noreferrer" class="rounded-2xl bg-emerald-600 px-4 py-2 text-white text-sm font-medium hover:bg-emerald-700">Comprar pelo WhatsApp</a>
+            <a href="#" data-agendar class="rounded-2xl border px-4 py-2 text-sm font-medium hover:bg-slate-50">Agendar</a>
             <span class="text-xs px-3 py-1 rounded-full bg-slate-100 text-slate-600">Aplicação em consultório</span>
           </div>
         </article>
@@ -224,6 +241,7 @@
           </ul>
           <div class="mt-5 flex flex-wrap gap-3">
             <a data-wa data-wa-text="Tenho interesse no Slim Shape Basis" data-wa-campaign="enzimas-slim" target="_blank" rel="noopener noreferrer" class="rounded-2xl bg-emerald-600 px-4 py-2 text-white text-sm font-medium hover:bg-emerald-700">Comprar pelo WhatsApp</a>
+            <a href="#" data-agendar class="rounded-2xl border px-4 py-2 text-sm font-medium hover:bg-slate-50">Agendar</a>
             <span class="text-xs px-3 py-1 rounded-full bg-slate-100 text-slate-600">Aplicação em consultório</span>
           </div>
         </article>
@@ -251,8 +269,9 @@
           <p class="mt-2 text-sm text-slate-600">Ajustes, manejo de efeitos e metas. Plano de hábitos e suporte contínuo.</p>
         </div>
       </div>
-      <div class="text-center mt-8">
-        <a data-wa data-wa-text="Quero passar pela triagem" data-wa-campaign="como-funciona" target="_blank" rel="noopener noreferrer" class="inline-flex rounded-2xl bg-emerald-600 px-6 py-3 text-white font-medium hover:bg-emerald-700">Começar pelo WhatsApp</a>
+      <div class="text-center mt-8 space-x-2">
+        <a data-wa data-wa-text="Quero passar pela triagem" data-wa-campaign="como-funciona" target="_blank" rel="noopener noreferrer" class="inline-flex rounded-2xl bg-emerald-600 px-6 py-3 text-white font-medium hover:bg-emerald-700">WhatsApp</a>
+        <a href="#" data-agendar class="inline-flex rounded-2xl border px-6 py-3 font-medium hover:bg-slate-50">Agendar consulta</a>
       </div>
     </div>
   </section>
@@ -264,7 +283,7 @@
       <p class="mt-3 text-center text-slate-600 max-w-3xl mx-auto">Atendemos <strong>online em todo o Brasil</strong> via videochamada. A prescrição é feita <strong>apenas quando clinicamente indicada</strong>. Oferecemos opções flexíveis para você escolher como prefere seguir.</p>
 
       <div class="mt-10 grid md:grid-cols-3 gap-6">
-        <!-- Plano 1 -->
+        <!-- Plano 1: Consulta online -->
         <article class="card rounded-3xl bg-white border border-slate-200 shadow-sm p-6">
           <div class="flex items-start justify-between gap-4">
             <h3 class="text-xl font-semibold text-slate-900">Consulta online</h3>
@@ -276,12 +295,13 @@
             <li>Receita digital quando indicado</li>
           </ul>
           <div class="mt-5 flex flex-wrap gap-3">
-            <a data-wa data-wa-text="Quero agendar consulta online" data-wa-campaign="planos-consulta" target="_blank" rel="noopener noreferrer" class="rounded-2xl bg-emerald-600 px-4 py-2 text-white text-sm font-medium hover:bg-emerald-700">Agendar agora</a>
+            <a data-wa data-wa-text="Quero agendar consulta online" data-wa-campaign="planos-consulta" target="_blank" rel="noopener noreferrer" class="rounded-2xl bg-emerald-600 px-4 py-2 text-white text-sm font-medium hover:bg-emerald-700">WhatsApp</a>
+            <a href="#" data-agendar class="rounded-2xl border px-4 py-2 text-sm font-medium hover:bg-slate-50">Agendar</a>
             <span class="text-xs px-3 py-1 rounded-full bg-slate-100 text-slate-600">Telemedicina</span>
           </div>
         </article>
 
-        <!-- Plano 2 -->
+        <!-- Plano 2: Combo completo -->
         <article class="card rounded-3xl bg-white border border-slate-200 shadow-sm p-6">
           <div class="flex items-start justify-between gap-4">
             <h3 class="text-xl font-semibold text-slate-900">Combo</h3>
@@ -294,12 +314,13 @@
             <li>Revisões e ajustes conforme resposta</li>
           </ul>
           <div class="mt-5 flex flex-wrap gap-3">
-            <a data-wa data-wa-text="Quero o combo consulta + medicação + acompanhamento" data-wa-campaign="planos-combo" target="_blank" rel="noopener noreferrer" class="rounded-2xl bg-emerald-600 px-4 py-2 text-white text-sm font-medium hover:bg-emerald-700">Pedir orçamento</a>
+            <a data-wa data-wa-text="Quero o combo consulta + medicação + acompanhamento" data-wa-campaign="planos-combo" target="_blank" rel="noopener noreferrer" class="rounded-2xl bg-emerald-600 px-4 py-2 text-white text-sm font-medium hover:bg-emerald-700">WhatsApp</a>
+            <a href="#" data-agendar class="rounded-2xl border px-4 py-2 text-sm font-medium hover:bg-slate-50">Agendar</a>
             <span class="text-xs px-3 py-1 rounded-full bg-slate-100 text-slate-600">Sob prescrição</span>
           </div>
         </article>
 
-        <!-- Plano 3 -->
+        <!-- Plano 3: Medicação isolada (pacientes) -->
         <article class="card rounded-3xl bg-white border border-slate-200 shadow-sm p-6">
           <div class="flex items-start justify-between gap-4">
             <h3 class="text-xl font-semibold text-slate-900">Medicação isolada</h3>
@@ -311,7 +332,8 @@
             <li>Orientação de compra em farmácias regulares</li>
           </ul>
           <div class="mt-5 flex flex-wrap gap-3">
-            <a data-wa data-wa-text="Sou paciente e preciso da renovação da medicação" data-wa-campaign="planos-medicacao" target="_blank" rel="noopener noreferrer" class="rounded-2xl bg-emerald-600 px-4 py-2 text-white text-sm font-medium hover:bg-emerald-700">Solicitar</a>
+            <a data-wa data-wa-text="Sou paciente e preciso da renovação da medicação" data-wa-campaign="planos-medicacao" target="_blank" rel="noopener noreferrer" class="rounded-2xl bg-emerald-600 px-4 py-2 text-white text-sm font-medium hover:bg-emerald-700">WhatsApp</a>
+            <a href="#" data-agendar class="rounded-2xl border px-4 py-2 text-sm font-medium hover:bg-slate-50">Agendar</a>
             <span class="text-xs px-3 py-1 rounded-full bg-slate-100 text-slate-600">Pacientes ativos</span>
           </div>
         </article>
@@ -350,8 +372,11 @@
   <section id="contato" class="py-16 md:py-24">
     <div class="container mx-auto px-4 text-center">
       <h2 class="text-2xl md:text-3xl font-bold">Pronto para avaliar seu caso?</h2>
-      <p class="mt-3 text-slate-600">Clique no botão e fale diretamente com a nossa equipe no WhatsApp.</p>
-      <a data-wa data-wa-text="Olá, gostaria de agendar minha consulta online" data-wa-campaign="cta-final" target="_blank" rel="noopener noreferrer" class="mt-6 inline-flex items-center gap-2 rounded-2xl bg-emerald-600 px-6 py-3 text-white font-medium shadow hover:bg-emerald-700">Atendimento via WhatsApp</a>
+      <p class="mt-3 text-slate-600">Clique no botão e fale diretamente com a nossa equipe.</p>
+      <div class="mt-6 flex items-center gap-3 justify-center">
+        <a data-wa data-wa-text="Olá, gostaria de agendar minha consulta online" data-wa-campaign="cta-final" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-2xl bg-emerald-600 px-6 py-3 text-white font-medium shadow hover:bg-emerald-700">WhatsApp</a>
+        <a href="#" data-agendar class="inline-flex items-center gap-2 rounded-2xl border px-6 py-3 font-medium hover:bg-slate-50">Agendar</a>
+      </div>
       <p class="mt-3 text-xs text-slate-500">Atendimento de segunda a sexta, 08h–18h (horário de Brasília).</p>
     </div>
   </section>
@@ -372,30 +397,22 @@
     <div class="border-t text-center text-xs text-slate-500 py-4">© <span id="ano"></span> Slinmex — Todos os direitos reservados.</div>
   </footer>
 
+  <!-- Calendly + comportamento -->
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
   <script>
-    // (Opcional) Redireciona APEX -> WWW (alinhado ao primário na Vercel)
-    (function () {
-      var h = location.hostname;
-      if (!h.startsWith('www.')) {
-        location.replace(location.protocol + '//www.' + h + location.pathname + location.search + location.hash);
-      }
-    })();
-
-    // Ano no rodapé (com guarda)
+    // Ano no rodapé
     var anoEl = document.getElementById('ano');
     if (anoEl) anoEl.textContent = new Date().getFullYear();
 
-    // Menu mobile toggle
+    // Menu mobile
     var btn = document.getElementById('menuBtn');
     var menu = document.getElementById('mobileMenu');
-    if (btn && menu) {
-      btn.addEventListener('click', function () { menu.hidden = !menu.hidden; });
-    }
+    if (btn && menu) btn.addEventListener('click', function(){ menu.hidden = !menu.hidden; });
 
-    // Preços centralizados
+    // Preços
     var PRICES = { consulta: 200, adipo: 79.90, slim: 110.00, combo: null };
     var br = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' });
-    document.querySelectorAll('[data-price]').forEach(function (el) {
+    document.querySelectorAll('[data-price]').forEach(function(el){
       var key = el.getAttribute('data-price');
       var v = PRICES[key];
       if (typeof v === 'number') el.textContent = br.format(v);
@@ -404,18 +421,27 @@
 
     // WhatsApp centralizado
     var WA_BASE = 'https://wa.me/5519997223709';
-    function buildWa(text, campaign) {
+    function buildWa(text, campaign){
       var p = new URLSearchParams();
       if (text) p.set('text', text);
-      p.set('source', 'site');
-      p.set('medium', 'cta');
+      p.set('source','site'); p.set('medium','cta');
       if (campaign) p.set('campaign', campaign);
       return WA_BASE + '?' + p.toString();
     }
-    document.querySelectorAll('[data-wa]').forEach(function (a) {
+    document.querySelectorAll('[data-wa]').forEach(function(a){
       var text = a.getAttribute('data-wa-text') || '';
       var campaign = a.getAttribute('data-wa-campaign') || '';
       a.href = buildWa(text, campaign);
+    });
+
+    // Calendly popup
+    // Usa o padrão baseado no email fornecido: drcarlosbiela@gmail.com
+    // Ajuste se o handle/evento for diferente.
+    var CALENDLY_URL = "https://calendly.com/drcarlosbiela/consulta-online";
+    function montarQuery(prefill){ var p=new URLSearchParams(); if(prefill && prefill.name) p.set('name',prefill.name); if(prefill && prefill.email) p.set('email',prefill.email); var s=p.toString(); return s?('?'+s):''; }
+    function abrirAgendamento(prefill){ if (window.Calendly) { Calendly.initPopupWidget({ url: CALENDLY_URL + montarQuery(prefill||{}) }); } else { alert('Carregando agenda...'); } }
+    document.querySelectorAll('[data-agendar]').forEach(function(el){
+      el.addEventListener('click', function(e){ e.preventDefault(); abrirAgendamento(); });
     });
   </script>
 </body>
