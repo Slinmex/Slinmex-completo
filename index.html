@@ -8,6 +8,26 @@
   <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
   <link rel="canonical" href="https://www.slinmex.com.br/" />
   <meta name="theme-color" content="#059669" />
+
+  <!-- Open Graph -->
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Slinmex" />
+  <meta property="og:title" content="Slinmex – Atendimento médico" />
+  <meta property="og:description" content="Informações claras, elegibilidade e agendamento online (Calendly) ou contato via WhatsApp." />
+  <meta property="og:url" content="https://www.slinmex.com.br/" />
+  <meta property="og:image" content="https://www.slinmex.com.br/og-cover.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Slinmex – Atendimento médico" />
+  <meta name="twitter:description" content="Agende online pelo Calendly ou fale no WhatsApp." />
+  <meta name="twitter:image" content="https://www.slinmex.com.br/og-cover.jpg" />
+
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     .container{max-width:1100px}
@@ -16,12 +36,27 @@
     .card:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(2,6,23,.08)}
     .modal-backdrop{position:fixed;inset:0;background:rgba(2,6,23,.55);backdrop-filter:blur(2px)}
   </style>
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"MedicalBusiness",
+    "name":"Slinmex",
+    "url":"https://www.slinmex.com.br/",
+    "medicalSpecialty":["Endocrinology","Nutrition"],
+    "areaServed":"BR",
+    "priceRange":"$$",
+    "telephone":"+55-19-99722-3709",
+    "identifier": { "@type":"PropertyValue", "name":"CNPJ", "value":"41.651.320/0001-99" }
+  }
+  </script>
 </head>
 <body class="bg-gradient-to-b from-slate-50 to-white text-slate-800">
   <!-- Topbar -->
   <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-200">
     <div class="container mx-auto px-4 py-3 flex items-center justify-between">
-      <a href="/index.html" class="flex items-center gap-2 no-underline hover:opacity-90" aria-label="Página inicial">
+      <a href="index.html" class="flex items-center gap-2 no-underline hover:opacity-90" aria-label="Página inicial">
         <div class="h-9 w-9 rounded-xl bg-slate-900 text-white grid place-items-center font-bold">SX</div>
         <span class="font-semibold">Slinmex</span>
       </a>
@@ -30,12 +65,12 @@
         <a href="#tratamentos" class="hover:text-slate-900">Tratamentos</a>
         <a href="#planos" class="hover:text-slate-900">Como trabalhamos</a>
         <a href="#enzimas" class="hover:text-slate-900">Enzimas</a>
-        <a href="/pre-consulta.html" class="hover:text-slate-900">Agendar</a>
+        <a href="pre-consulta.html" class="hover:text-slate-900 js-pre">Agendar</a>
         <a href="#faq" class="hover:text-slate-900">FAQ</a>
         <a href="#contato" class="hover:text-slate-900">Contato</a>
       </nav>
       <div class="flex items-center gap-3">
-        <a class="hidden md:inline-flex items-center gap-2 rounded-2xl bg-emerald-600 px-4 py-2 text-white text-sm font-medium shadow hover:bg-emerald-700" href="/pre-consulta.html">Agendar consulta</a>
+        <a class="hidden md:inline-flex items-center gap-2 rounded-2xl bg-emerald-600 px-4 py-2 text-white text-sm font-medium shadow hover:bg-emerald-700 js-pre" href="pre-consulta.html">Agendar consulta</a>
         <a data-wa data-wa-text="Olá! Quero atendimento sobre Ozempic ou Mounjaro." data-wa-campaign="topo" target="_blank" rel="noopener" class="hidden md:inline-flex items-center gap-2 rounded-2xl border px-4 py-2 text-sm font-medium">WhatsApp</a>
         <button class="md:hidden inline-flex items-center justify-center h-9 w-9 rounded-lg border border-slate-200" aria-label="Abrir menu" id="menuBtn">☰</button>
       </div>
@@ -47,11 +82,10 @@
         <a href="#tratamentos" class="py-1">Tratamentos</a>
         <a href="#planos" class="py-1">Como trabalhamos</a>
         <a href="#enzimas" class="py-1">Enzimas</a>
-        <a href="/pre-consulta.html" class="py-1">Agendar</a>
+        <a href="pre-consulta.html" class="py-1 js-pre">Agendar</a>
         <a href="#faq" class="py-1">FAQ</a>
         <a href="#contato" class="py-1">Contato</a>
-        <a class="mt-2 inline-flex items-center justify-center rounded-2xl bg-emerald-600 px-4 py-2 text-white text-sm font-medium shadow hover:bg-emerald-700" href="/pre-consulta.html">Agendar consulta</a>
-        <a data-wa data-wa-text="Quero tirar dúvidas no WhatsApp" data-wa-campaign="topo-mobile" target="_blank" rel="noopener" class="inline-flex items-center justify-center rounded-2xl border px-4 py-2 text-sm font-medium">WhatsApp</a>
+        <a class="mt-2 inline-flex items-center justify-center rounded-2xl bg-emerald-600 px-4 py-2 text-white text-sm font-medium shadow hover:bg-emerald-700 js-pre" href="pre-consulta.html">Agendar consulta</a>
       </div>
     </div>
   </header>
@@ -64,7 +98,7 @@
         <h1 class="text-3xl md:text-5xl font-extrabold leading-tight">Acompanhamento médico para controle de peso</h1>
         <p class="mt-4 text-slate-600 md:text-lg">Atendimento humanizado com <strong>Ozempic (Semaglutida)</strong> e <strong>Mounjaro (Tirzepatida)</strong> quando indicado. Avaliamos se é seguro para você, explicamos o uso e acompanhamos a evolução.</p>
         <div class="mt-6 flex gap-3 flex-wrap">
-          <a class="rounded-2xl bg-emerald-600 px-5 py-3 text-white font-medium shadow hover:bg-emerald-700" href="/pre-consulta.html">Agendar consulta</a>
+          <a class="rounded-2xl bg-emerald-600 px-5 py-3 text-white font-medium shadow hover:bg-emerald-700 js-pre" href="pre-consulta.html">Agendar consulta</a>
           <a data-wa data-wa-text="Quero avaliar minha elegibilidade" data-wa-campaign="hero-elig" target="_blank" rel="noopener" class="rounded-2xl border px-5 py-3 font-medium">Falar no WhatsApp</a>
         </div>
         <ul class="mt-6 text-sm text-slate-600 space-y-1">
@@ -75,6 +109,7 @@
       </div>
       <div class="md:justify-self-end">
         <div class="glass relative rounded-3xl p-6 shadow-xl border border-slate-200 overflow-hidden">
+          <!-- Ilustração leve no canto (decorativa) -->
           <span aria-hidden="true" class="absolute -right-4 -top-4 opacity-15 rotate-6">
             <svg width="140" height="140" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect x="20" y="30" width="160" height="110" rx="16" stroke="#065f46" stroke-width="3"/>
@@ -90,7 +125,7 @@
             <li><span class="font-medium">2. Consulta</span> – videochamada e, se indicado, receita digital.</li>
             <li><span class="font-medium">3. Acompanhamento</span> – suporte pelo WhatsApp e revisões.</li>
           </ol>
-          <a class="mt-6 inline-flex items-center justify-center w-full rounded-2xl bg-emerald-600 px-5 py-3 text-white font-medium shadow hover:bg-emerald-700" href="/pre-consulta.html">Começar agora</a>
+          <a class="mt-6 inline-flex items-center justify-center w-full rounded-2xl bg-emerald-600 px-5 py-3 text-white font-medium shadow hover:bg-emerald-700 js-pre" href="pre-consulta.html">Começar agora</a>
         </div>
       </div>
     </div>
@@ -108,7 +143,7 @@
         <h3 class="font-semibold">Indicações e contraindicações (resumo)</h3>
         <ul class="mt-3 text-sm text-slate-700 space-y-2 list-disc list-inside">
           <li>Indicações: obesidade ou sobrepeso com comorbidades, após avaliação clínica.</li>
-          <li>Contraindicações: histórico de MTC/MEN2, pancreatite prévia, alergia, entre outras.</li>
+          <li>Contraindicações: histórico de MTC/MEN2, pancreatite prévia (precaução), alergia, gestação/amamentação.</li>
           <li>Avaliação médica obrigatória antes de iniciar.</li>
         </ul>
       </div>
@@ -126,6 +161,7 @@
         <article class="card rounded-3xl bg-white border border-slate-200 shadow-sm p-6">
           <div class="flex items-center justify-between">
             <div class="flex items-center gap-3">
+              <!-- Ilustração caneta injetora -->
               <span aria-hidden="true" class="inline-block h-10 w-10 rounded-xl bg-emerald-50 grid place-items-center">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 21l3-1 11-11-2-2L4 18 3 21z" stroke="#065f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -139,10 +175,10 @@
           <ul class="mt-4 text-sm text-slate-700 space-y-2 list-disc list-inside">
             <li><span class="font-medium">Objetivo:</span> apoiar o emagrecimento junto com plano alimentar e hábitos.</li>
             <li><span class="font-medium">Como usa:</span> injeção subcutânea com caneta.</li>
-            <li><span class="font-medium">Possíveis efeitos:</span> náusea, plenitude gástrica, azia.</li>
+            <li><span class="font-medium">Possíveis efeitos:</span> náusea, plenitude gástrica, azia (tendem a reduzir).</li>
           </ul>
           <div class="mt-6 flex gap-3">
-            <a class="rounded-2xl bg-emerald-600 px-4 py-2 text-white text-sm font-medium hover:bg-emerald-700" href="/pre-consulta.html">Agendar avaliação</a>
+            <a class="rounded-2xl bg-emerald-600 px-4 py-2 text-white text-sm font-medium hover:bg-emerald-700 js-pre" href="pre-consulta.html">Agendar avaliação</a>
           </div>
         </article>
 
@@ -150,6 +186,7 @@
         <article class="card rounded-3xl bg-white border border-slate-200 shadow-sm p-6">
           <div class="flex items-center justify-between">
             <div class="flex items-center gap-3">
+              <!-- Ilustração dupla via hormonal -->
               <span aria-hidden="true" class="inline-block h-10 w-10 rounded-xl bg-emerald-50 grid place-items-center">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="8" cy="8" r="4" stroke="#065f46" stroke-width="1.5"/>
@@ -167,7 +204,7 @@
             <li><span class="font-medium">Possíveis efeitos:</span> semelhantes aos do Ozempic.</li>
           </ul>
           <div class="mt-6 flex gap-3">
-            <a class="rounded-2xl bg-emerald-600 px-4 py-2 text-white text-sm font-medium hover:bg-emerald-700" href="/pre-consulta.html">Agendar avaliação</a>
+            <a class="rounded-2xl bg-emerald-600 px-4 py-2 text-white text-sm font-medium hover:bg-emerald-700 js-pre" href="pre-consulta.html">Agendar avaliação</a>
           </div>
         </article>
       </div>
@@ -187,6 +224,7 @@
             <h3 class="text-xl font-semibold text-slate-900">Adipo Balance</h3>
             <span class="price inline-block rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-sm text-emerald-700" data-price="adipo"></span>
           </div>
+          <!-- Ícone seringa decorativo -->
           <span aria-hidden="true" class="absolute top-3 right-3 opacity-20">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M19 3l2 2-3 3 1 1-2 2 1 1-7 7-4-4 7-7 1 1 2-2 1 1 3-3z" stroke="#065f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -206,9 +244,10 @@
             <h3 class="text-xl font-semibold text-slate-900">Slim Shape Basis</h3>
             <span class="price inline-block rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-sm text-emerald-700" data-price="slim"></span>
           </div>
+          <!-- Ícone seringa decorativo -->
           <span aria-hidden="true" class="absolute top-3 right-3 opacity-20">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M19 3l2 2-3  3 1 1-2 2 1 1-7 7-4-4 7-7 1 1 2-2 1 1 3-3z" stroke="#065f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M19 3l2 2-3 3 1 1-2 2 1 1-7 7-4-4 7-7 1 1 2-2 1 1 3-3z" stroke="#065f46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               <path d="M5 19l-1 1" stroke="#065f46" stroke-width="1.5" stroke-linecap="round"/>
             </svg>
           </span>
@@ -220,33 +259,117 @@
         </article>
       </div>
 
-      <p class="mt-6 text-xs text-slate-500">Observação: indicação, número de sessões e intervalos variam conforme avaliação médica. Não fazemos promessas de resultado.</p>
+      <p class="mt-6 text-xs text-slate-500">Observação: indicação, número de sessões e intervalos variam conforme avaliação médica.</p>
     </div>
   </section>
 
-  <!-- Modal de Enzimas -->
+  <!-- Modal Enzimas -->
   <div id="enzymeModal" class="hidden" aria-hidden="true">
     <div class="modal-backdrop grid place-items-center p-4">
       <div class="relative w-full max-w-2xl rounded-2xl bg-white p-6 shadow-xl border border-slate-200" role="dialog" aria-modal="true" aria-labelledby="enzymeTitle">
         <button id="closeModal" class="absolute right-3 top-3 h-9 w-9 grid place-items-center rounded-full border hover:bg-slate-50" aria-label="Fechar">✕</button>
         <h3 id="enzymeTitle" class="text-xl font-semibold"></h3>
         <p id="enzymeDesc" class="text-sm text-slate-600 mt-1"></p>
-
         <h4 class="mt-5 text-sm font-semibold text-slate-800">Composição e função</h4>
         <div id="enzymeList" class="mt-2 space-y-3"></div>
-
         <h4 class="mt-5 text-sm font-semibold text-slate-800">Observações (via/ritmo/cuidados)</h4>
         <ul id="enzymeObs" class="mt-2 list-disc list-inside text-sm text-slate-700 space-y-2"></ul>
-
         <div class="mt-5 flex items-center justify-between gap-3">
           <a id="enzymeWhats" class="rounded-2xl border px-4 py-2 text-sm font-medium" target="_blank" rel="noopener">Tirar dúvidas no WhatsApp</a>
           <button id="closeModal2" class="rounded-2xl bg-emerald-600 px-4 py-2 text-white text-sm font-medium shadow hover:bg-emerald-700">Entendi</button>
         </div>
-
-        <p class="mt-4 text-xs text-slate-500">Conteúdo informativo. Protocolos podem variar conforme avaliação.</p>
+        <p class="mt-4 text-xs text-slate-500">Conteúdo informativo. Protocolos podem variar.</p>
       </div>
     </div>
   </div>
+
+  <!-- Como funciona -->
+  <section id="como-funciona" class="py-16 md:py-24">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-center">Como funciona</h2>
+      <div class="mt-10 grid md:grid-cols-3 gap-6">
+        <div class="rounded-3xl border p-6">
+          <div class="text-sm font-semibold">1) Triagem</div>
+          <p class="mt-2 text-sm text-slate-600">Questionário e documentos de saúde pelo WhatsApp. Verificamos elegibilidade.</p>
+        </div>
+        <div class="rounded-3xl border p-6">
+          <div class="text-sm font-semibold">2) Consulta</div>
+          <p class="mt-2 text-sm text-slate-600">Videochamada. Se indicado, receita digital e instruções.</p>
+        </div>
+        <div class="rounded-3xl border p-6">
+          <div class="text-sm font-semibold">3) Acompanhamento</div>
+          <p class="mt-2 text-sm text-slate-600">Ajustes, manejo de efeitos, metas e retornos.</p>
+        </div>
+      </div>
+      <div class="text-center mt-8">
+        <a class="inline-flex rounded-2xl bg-emerald-600 px-6 py-3 text-white font-medium hover:bg-emerald-700 js-pre" href="pre-consulta.html">Agendar consulta</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Como trabalhamos / Planos -->
+  <section id="planos" class="py-16 md:py-24 bg-slate-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-center">Como trabalhamos</h2>
+      <p class="mt-3 text-center text-slate-600 max-w-3xl mx-auto">Atendemos <strong>online em todo o Brasil</strong>. A prescrição é feita <strong>apenas quando clinicamente indicada</strong>. Escolha como prefere seguir.</p>
+
+      <div class="mt-10 grid md:grid-cols-3 gap-6">
+        <!-- Plano 1 -->
+        <article class="card rounded-3xl bg-white border border-slate-200 shadow-sm p-6">
+          <h3 class="text-xl font-semibold text-slate-900">Consulta online</h3>
+          <p class="mt-2 text-sm text-slate-600">Avaliação por videochamada, revisão de exames e plano inicial.</p>
+          <div class="mt-5">
+            <a class="rounded-2xl bg-emerald-600 px-4 py-2 text-white text-sm font-medium hover:bg-emerald-700 js-pre" href="pre-consulta.html">Agendar</a>
+          </div>
+        </article>
+
+        <!-- Plano 2 -->
+        <article class="card rounded-3xl bg-white border border-slate-200 shadow-sm p-6">
+          <h3 class="text-xl font-semibold text-slate-900">Combo</h3>
+          <p class="mt-2 text-sm text-slate-600">Avaliação, prescrição quando indicada, suporte na aquisição e acompanhamento.</p>
+          <div class="mt-5">
+            <a class="rounded-2xl bg-emerald-600 px-4 py-2 text-white text-sm font-medium hover:bg-emerald-700 js-pre" href="pre-consulta.html">Agendar</a>
+          </div>
+        </article>
+
+        <!-- Plano 3 -->
+        <article class="card rounded-3xl bg-white border border-slate-200 shadow-sm p-6">
+          <h3 class="text-xl font-semibold text-slate-900">Medicação (pacientes)</h3>
+          <p class="mt-2 text-sm text-slate-600">Para quem <strong>já é paciente</strong> e possui indicação válida. Orientamos aquisição segura.</p>
+          <div class="mt-5">
+            <a data-wa data-wa-text="Sou paciente e preciso da renovação" data-wa-campaign="planos-medicacao" target="_blank" rel="noopener" class="rounded-2xl border px-4 py-2 text-sm font-medium">Falar no WhatsApp</a>
+          </div>
+        </article>
+      </div>
+
+      <p class="mt-6 text-xs text-slate-500 text-center">Importante: não realizamos venda direta ao público leigo. A medicação é dispensada apenas mediante <strong>avaliação médica e prescrição</strong>. Envios com cadeia fria quando aplicável.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-16 md:py-24 bg-slate-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-center">Perguntas frequentes</h2>
+      <div class="mt-10 grid md:grid-cols-2 gap-6">
+        <details class="rounded-2xl bg-white border p-5">
+          <summary class="font-medium cursor-pointer">Posso comprar sem receita?</summary>
+          <p class="mt-3 text-sm text-slate-600">Não. São medicamentos de uso sob prescrição. A indicação parte de avaliação médica.</p>
+        </details>
+        <details class="rounded-2xl bg-white border p-5">
+          <summary class="font-medium cursor-pointer">Como é o acompanhamento?</summary>
+          <p class="mt-3 text-sm text-slate-600">Acompanhamento periódico por mensagens e consultas de revisão, com ajustes individualizados.</p>
+        </details>
+        <details class="rounded-2xl bg-white border p-5">
+          <summary class="font-medium cursor-pointer">Gestantes podem usar?</summary>
+          <p class="mt-3 text-sm text-slate-600">Não. Há contraindicação na gestação e amamentação. Conversamos sobre planejamento antes de iniciar.</p>
+        </details>
+        <details class="rounded-2xl bg-white border p-5">
+          <summary class="font-medium cursor-pointer">Há entrega do medicamento?</summary>
+          <p class="mt-3 text-sm text-slate-600">Orientamos compra em farmácias com receita digital. Quando aplicável, oferecemos logística com cadeia fria.</p>
+        </details>
+      </div>
+    </div>
+  </section>
 
   <!-- CTA final -->
   <section id="contato" class="py-16 md:py-24">
@@ -254,8 +377,8 @@
       <h2 class="text-2xl md:text-3xl font-bold">Pronto para avaliar seu caso?</h2>
       <p class="mt-3 text-slate-600">Clique para preencher a pré-consulta e seguir para o agendamento.</p>
       <div class="mt-6 flex items-center justify-center gap-3 flex-wrap">
-        <a class="inline-flex items-center gap-2 rounded-2xl bg-emerald-600 px-6 py-3 text-white font-medium shadow hover:bg-emerald-700" href="/pre-consulta.html">Agendar consulta</a>
-        <a data-wa data-wa-text="Olá, gostaria de informações antes de agendar" data-wa-campaign="cta-final" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-2xl border px-6 py-3 font-medium">WhatsApp</a>
+        <a class="inline-flex items-center gap-2 rounded-2xl bg-emerald-600 px-6 py-3 text-white font-medium shadow hover:bg-emerald-700 js-pre" href="pre-consulta.html">Agendar consulta</a>
+        <a data-wa data-wa-text="Olá, gostaria de agendar minha consulta online" data-wa-campaign="cta-final" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-2xl border px-6 py-3 font-medium">WhatsApp</a>
       </div>
       <p class="mt-3 text-xs text-slate-500">Seg–Sex, 08h–18h (Brasília).</p>
     </div>
@@ -266,7 +389,7 @@
     <div class="container mx-auto px-4 py-10 grid md:grid-cols-2 gap-6 text-sm">
       <div>
         <div class="font-semibold">Aviso legal</div>
-        <p class="mt-2 text-slate-600">Este site tem caráter informativo. Ozempic e Mounjaro são de <strong>uso sob prescrição</strong> e podem apresentar riscos. O tratamento é individualizado e requer avaliação médica.</p>
+        <p class="mt-2 text-slate-600">Este site tem caráter informativo. Ozempic e Mounjaro são de <strong>uso sob prescrição</strong> e podem apresentar riscos. O tratamento é individualizado e requer avaliação médica. Não prometemos resultados.</p>
       </div>
       <div>
         <div class="font-semibold">Privacidade (LGPD)</div>
@@ -278,12 +401,30 @@
   </footer>
 
   <script>
-    // Base
+    // Evita redirecionar quando abrindo via file:// (prévia local)
+    (function () {
+      var isHttp = location.protocol === 'http:' || location.protocol === 'https:';
+      if (!isHttp) return;
+      // Se quiser forçar WWW, habilite abaixo:
+      // var h = location.hostname; if (h && !h.startsWith('www.')) { location.replace(location.protocol + '//www.' + h + location.pathname + location.search + location.hash); }
+    })();
+
+    // Ano no rodapé
+    var anoEl = document.getElementById('ano');
+    if (anoEl) anoEl.textContent = new Date().getFullYear();
+
+    // Menu mobile toggle
+    var btn = document.getElementById('menuBtn');
+    var menu = document.getElementById('mobileMenu');
+    if (btn && menu) { btn.addEventListener('click', function () { menu.hidden = !menu.hidden; }); }
+
+    // WhatsApp centralizado
     var WA_BASE = 'https://wa.me/5519997223709';
     function buildWa(text, campaign) {
       var p = new URLSearchParams();
       if (text) p.set('text', text);
-      p.set('source', 'site'); p.set('medium', 'cta');
+      p.set('source', 'site');
+      p.set('medium', 'cta');
       if (campaign) p.set('campaign', campaign);
       return WA_BASE + '?' + p.toString();
     }
@@ -293,7 +434,7 @@
       a.href = buildWa(text, campaign);
     });
 
-    // Preços
+    // Preços (enzimas)
     var PRICES = { adipo: 79.90, slim: 110.00 };
     var br = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' });
     document.querySelectorAll('[data-price]').forEach(function(el){
@@ -302,7 +443,7 @@
       el.textContent = typeof v === 'number' ? br.format(v) : 'Consulte';
     });
 
-    // Dados dos protocolos
+    // Enzimas - conteúdo do modal
     var ENZIMAS_INFO = {
       adipo: {
         title: "Adipo Balance",
@@ -339,14 +480,13 @@
       }
     };
 
-    // Modal
+    // Modal handlers
     var modal = document.getElementById('enzymeModal');
     var modalTitle = document.getElementById('enzymeTitle');
     var modalDesc  = document.getElementById('enzymeDesc');
     var modalList  = document.getElementById('enzymeList');
     var modalObs   = document.getElementById('enzymeObs');
     var modalWA    = document.getElementById('enzymeWhats');
-
     function openModal(key){
       var d = ENZIMAS_INFO[key]; if(!d) return;
       modalTitle.textContent = d.title || '';
@@ -356,8 +496,8 @@
         var div = document.createElement('div');
         div.className = 'rounded-xl border p-3';
         div.innerHTML =
-          '<div class="text-sm font-medium">'+ (it.nome || 'Componente') +'</div>'+
-          '<div class="text-sm text-slate-600 mt-1">'+ (it.papel || '—') +'</div>';
+          '<div class="text-sm font-medium">' + (it.nome || 'Componente') + '</div>'+
+          '<div class="text-sm text-slate-600 mt-1">' + (it.papel || '—') + '</div>';
         modalList.appendChild(div);
       });
       modalObs.innerHTML = '';
@@ -369,7 +509,9 @@
       modal.setAttribute('aria-hidden','false');
       document.getElementById('closeModal').focus();
     }
-    function closeModal(){ modal.classList.add('hidden'); modal.setAttribute('aria-hidden','true'); }
+    function closeModal(){
+      modal.classList.add('hidden'); modal.setAttribute('aria-hidden','true');
+    }
     document.querySelectorAll('.enzyme-card').forEach(function(card){
       card.addEventListener('click', function(){ openModal(card.getAttribute('data-enzyme')); });
       card.addEventListener('keydown', function(e){
@@ -385,10 +527,16 @@
       if(e.key === 'Escape' && modal.getAttribute('aria-hidden') === 'false'){ closeModal(); }
     });
 
-    // util
-    var anoEl = document.getElementById('ano'); if (anoEl) anoEl.textContent = new Date().getFullYear();
-    var btn = document.getElementById('menuBtn'); var menu = document.getElementById('mobileMenu');
-    if (btn && menu) { btn.addEventListener('click', function () { menu.hidden = !menu.hidden; }); }
+    // FORÇA navegação para a pré-consulta em qualquer ambiente
+    (function(){
+      function go(e){
+        try { e.preventDefault(); } catch(_){}
+        var url = 'pre-consulta.html';
+        try { window.location.assign(url); } catch(_) { window.location.href = url; }
+        return false;
+      }
+      document.querySelectorAll('.js-pre').forEach(function(a){ a.addEventListener('click', go); });
+    })();
   </script>
 </body>
 </html>
