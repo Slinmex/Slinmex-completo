@@ -17,7 +17,7 @@
 <body class="bg-gradient-to-b from-slate-50 to-white text-slate-800">
   <header class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-slate-200">
     <div class="container mx-auto px-4 py-3 flex items-center justify-between">
-      <a href="/index.html" class="flex items-center gap-2 no-underline hover:opacity-90" aria-label="Página inicial">
+      <a href="index.html" class="flex items-center gap-2 no-underline hover:opacity-90" aria-label="Página inicial">
         <div class="h-9 w-9 rounded-xl bg-slate-900 text-white grid place-items-center font-bold">SX</div>
         <span class="font-semibold">Slinmex</span>
       </a>
@@ -30,7 +30,6 @@
     <p class="mt-2 text-slate-600">Leva menos de 2 minutos. Ao enviar, abriremos o WhatsApp com o resumo e levaremos você direto ao agendamento.</p>
 
     <form id="preForm" class="mt-8 grid gap-6">
-      <!-- Identificação básica -->
       <section class="rounded-3xl border p-5 bg-white">
         <h2 class="text-lg font-semibold">1) Identificação</h2>
         <div class="mt-4 grid md:grid-cols-2 gap-4">
@@ -45,7 +44,6 @@
         </div>
       </section>
 
-      <!-- Medidas -->
       <section class="rounded-3xl border p-5 bg-white">
         <h2 class="text-lg font-semibold">2) Medidas</h2>
         <div class="mt-4 grid md:grid-cols-3 gap-4">
@@ -72,7 +70,6 @@
         </div>
       </section>
 
-      <!-- Comorbidades -->
       <section class="rounded-3xl border p-5 bg-white">
         <h2 class="text-lg font-semibold">3) Saúde</h2>
         <div class="mt-3 grid md:grid-cols-2 gap-6">
@@ -97,7 +94,6 @@
         </div>
       </section>
 
-      <!-- Objetivo -->
       <section class="rounded-3xl border p-5 bg-white">
         <h2 class="text-lg font-semibold">4) Objetivo</h2>
         <label class="block text-sm">
@@ -106,7 +102,6 @@
         </label>
       </section>
 
-      <!-- Consentimento -->
       <section class="rounded-3xl border p-5 bg-white">
         <label class="flex items-start gap-3 text-sm">
           <input type="checkbox" id="consent" class="mt-1 h-4 w-4 rounded border" required>
@@ -114,10 +109,9 @@
         </label>
       </section>
 
-      <!-- Ações -->
       <div class="flex flex-col md:flex-row items-center gap-3">
         <button type="submit" class="rounded-2xl bg-emerald-600 px-6 py-3 text-white font-medium shadow hover:bg-emerald-700">Enviar e ir ao agendamento</button>
-        <a href="/index.html" class="text-sm underline">Voltar ao site</a>
+        <a href="index.html" class="text-sm underline">Voltar ao site</a>
       </div>
 
       <p class="text-xs text-slate-500">Ao enviar, abriremos o WhatsApp com seu resumo para nossa equipe e você será levado ao Calendly para escolher o melhor horário.</p>
@@ -125,11 +119,9 @@
   </main>
 
   <script>
-    // Constantes
     var CALENDLY_URL = "https://calendly.com/slinmex?utm_source=site&utm_medium=preconsulta";
     var WA_BASE = "https://wa.me/5519997223709";
 
-    // IMC automático (altura em cm ou m)
     function parseAltura(valor, unidadeSel){
       var v = parseFloat(String(valor).replace(',', '.'));
       if (!isFinite(v) || v <= 0) return null;
@@ -157,7 +149,6 @@
       return WA_BASE + '?' + p.toString();
     }
 
-    // Envio
     document.getElementById('preForm').addEventListener('submit', function(e){
       e.preventDefault();
       var nome  = document.getElementById('nome').value.trim();
