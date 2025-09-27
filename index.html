@@ -4,9 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Slinmex – Ozempic, Mounjaro & Enzimas</title>
-  <meta name="description" content="Acompanhamento médico para controle de peso com Ozempic (semaglutida) e Mounjaro (tirzepatida). Consulta online, prescrição responsável e acompanhamento. Enzimas corporais aplicadas em consultório." />
+  <meta name="description" content="Atendimento médico para controle de peso com Ozempic (semaglutida) e Mounjaro (tirzepatida). Avaliação online, prescrição responsável e acompanhamento. Enzimas corporais aplicadas em consultório." />
   <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
-  <link rel="canonical" href="https://www.slinmex.com.br/" />
+  <link rel="canonical" href="https://slinmex.com.br/" />
   <meta name="theme-color" content="#059669" />
 
   <!-- Open Graph -->
@@ -14,15 +14,9 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Slinmex" />
   <meta property="og:title" content="Slinmex – Atendimento médico" />
-  <meta property="og:description" content="Informações objetivas, elegibilidade e agendamento online." />
-  <meta property="og:url" content="https://www.slinmex.com.br/" />
-  <meta property="og:image" content="https://www.slinmex.com.br/og-cover.jpg" />
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Slinmex – Atendimento médico" />
-  <meta name="twitter:description" content="Informações, elegibilidade e agendamento online." />
-  <meta name="twitter:image" content="https://www.slinmex.com.br/og-cover.jpg" />
+  <meta property="og:description" content="Informações, elegibilidade e link para atendimento via WhatsApp." />
+  <meta property="og:url" content="https://slinmex.com.br/" />
+  <meta property="og:image" content="https://slinmex.com.br/og-cover.jpg" />
 
   <link rel="icon" href="/favicon.ico" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -38,17 +32,17 @@
     .card:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(2,6,23,.08)}
   </style>
 
-  <!-- Schema.org JSON-LD -->
+  <!-- JSON-LD -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"MedicalBusiness",
     "name":"Slinmex",
-    "url":"https://www.slinmex.com.br/",
+    "url":"https://slinmex.com.br/",
     "medicalSpecialty":["Endocrinology","Nutrition"],
     "areaServed":"BR",
     "priceRange":"$$",
-    "telephone":"+55-19-99722-3709",
+    "telephone":"+55-11-99999-9999",
     "identifier": {"@type":"PropertyValue","name":"CNPJ","value":"41.651.320/0001-99"}
   }
   </script>
@@ -61,33 +55,43 @@
         <div class="h-9 w-9 rounded-xl bg-slate-900 text-white grid place-items-center font-bold">SX</div>
         <span class="font-semibold">Slinmex</span>
       </a>
+
       <nav class="hidden md:flex items-center gap-6 text-sm" role="navigation" aria-label="Navegação principal">
         <a href="#sobre" class="hover:text-slate-900">Sobre</a>
         <a href="#tratamentos" class="hover:text-slate-900">Tratamentos</a>
-        <a href="#enzimas" class="hover:text-slate-900">Enzimas</a>
         <a href="#planos" class="hover:text-slate-900">Como trabalhamos</a>
+        <a href="#enzimas" class="hover:text-slate-900">Enzimas</a>
+        <a href="#como-funciona" class="hover:text-slate-900">Como funciona</a>
         <a href="#faq" class="hover:text-slate-900">FAQ</a>
         <a href="#contato" class="hover:text-slate-900">Contato</a>
       </nav>
-      <div class="flex items-center gap-2">
-        <a href="#" data-agendar class="inline-flex items-center gap-2 rounded-2xl bg-emerald-600 px-4 py-2 text-white text-sm font-medium shadow hover:bg-emerald-700">Agendar online</a>
-        <a data-wa data-wa-text="Olá, tenho interesse em atendimento" data-wa-campaign="topo" target="_blank" rel="noopener noreferrer" class="hidden md:inline-flex items-center gap-2 rounded-2xl border px-4 py-2 text-sm font-medium hover:bg-slate-50">WhatsApp</a>
+
+      <!-- Único CTA principal: Agendar online (Calendly) -->
+      <div class="flex items-center gap-3">
+        <a href="https://calendly.com/slinmex"
+           target="_blank" rel="noopener noreferrer"
+           class="hidden md:inline-flex items-center gap-2 rounded-2xl bg-emerald-600 px-4 py-2 text-white text-sm font-medium shadow hover:bg-emerald-700">
+          Agendar online
+        </a>
         <button class="md:hidden inline-flex items-center justify-center h-9 w-9 rounded-lg border border-slate-200" aria-label="Abrir menu" id="menuBtn">☰</button>
       </div>
     </div>
+
     <!-- Menu mobile -->
     <div class="md:hidden border-t border-slate-200 bg-white/95 backdrop-blur" id="mobileMenu" hidden>
       <div class="container mx-auto px-4 py-3 flex flex-col gap-3 text-sm">
         <a href="#sobre" class="py-1">Sobre</a>
         <a href="#tratamentos" class="py-1">Tratamentos</a>
-        <a href="#enzimas" class="py-1">Enzimas</a>
         <a href="#planos" class="py-1">Como trabalhamos</a>
+        <a href="#enzimas" class="py-1">Enzimas</a>
+        <a href="#como-funciona" class="py-1">Como funciona</a>
         <a href="#faq" class="py-1">FAQ</a>
         <a href="#contato" class="py-1">Contato</a>
-        <div class="flex gap-2 pt-2">
-          <a href="#" data-agendar class="flex-1 inline-flex items-center justify-center rounded-2xl bg-emerald-600 px-4 py-2 text-white text-sm font-medium shadow hover:bg-emerald-700">Agendar online</a>
-          <a data-wa data-wa-text="Olá, tenho interesse em atendimento" data-wa-campaign="topo-mobile" target="_blank" rel="noopener noreferrer" class="flex-1 inline-flex items-center justify-center rounded-2xl border px-4 py-2 text-sm font-medium hover:bg-slate-50">WhatsApp</a>
-        </div>
+        <a href="https://calendly.com/slinmex"
+           target="_blank" rel="noopener noreferrer"
+           class="mt-2 inline-flex items-center justify-center rounded-2xl bg-emerald-600 px-4 py-2 text-white text-sm font-medium shadow hover:bg-emerald-700">
+          Agendar online
+        </a>
       </div>
     </div>
   </header>
@@ -98,26 +102,36 @@
     <div class="container mx-auto px-4 py-16 md:py-24 grid md:grid-cols-2 gap-8 items-center">
       <div>
         <h1 class="text-3xl md:text-5xl font-extrabold leading-tight">Acompanhamento médico para controle de peso</h1>
-        <p class="mt-4 text-slate-600 md:text-lg">Atendimento humanizado com <strong>Ozempic</strong> (semaglutida) e <strong>Mounjaro</strong> (tirzepatida) quando indicado. Avaliação de elegibilidade, prescrição responsável e seguimento.</p>
+        <p class="mt-4 text-slate-600 md:text-lg">
+          Atendimento humanizado com <strong>Ozempic</strong> (semaglutida) e <strong>Mounjaro</strong> (tirzepatida) quando indicado.
+          Avaliação de elegibilidade, prescrição responsável e seguimento.
+        </p>
         <div class="mt-6 flex gap-3">
-          <a href="#" data-agendar class="rounded-2xl bg-emerald-600 px-5 py-3 text-white font-medium shadow hover:bg-emerald-700">Agendar online</a>
-          <a data-wa data-wa-text="Quero avaliar minha elegibilidade" data-wa-campaign="hero-elig" target="_blank" rel="noopener noreferrer" class="rounded-2xl border px-5 py-3 font-medium hover:bg-slate-50">Falar no WhatsApp</a>
+          <a href="https://calendly.com/slinmex" target="_blank" rel="noopener noreferrer"
+             class="rounded-2xl bg-emerald-600 px-5 py-3 text-white font-medium shadow hover:bg-emerald-700">
+            Agendar online
+          </a>
+          <a href="#tratamentos" class="rounded-2xl border px-5 py-3 font-medium hover:bg-slate-50">Ver tratamentos</a>
         </div>
         <ul class="mt-6 text-sm text-slate-600 space-y-1">
           <li>• Consulta online com médico</li>
-          <li>• Prescrição somente quando houver indicação e segurança</li>
+          <li>• Prescrição apenas quando houver indicação e segurança</li>
           <li>• Acompanhamento e ajustes de dose</li>
         </ul>
       </div>
+
       <div class="md:justify-self-end">
         <div class="glass rounded-3xl p-6 shadow-xl border border-slate-200">
-          <h3 class="text-lg font-semibold">Inicie em 3 passos</h3>
+          <h3 class="text-lg font-semibold">Comece em 3 passos</h3>
           <ol class="mt-4 space-y-3 text-sm">
-            <li><span class="font-medium">1. Triagem</span> – responda um questionário rápido de saúde.</li>
-            <li><span class="font-medium">2. Consulta</span> – videochamada para avaliação e prescrição se indicado.</li>
-            <li><span class="font-medium">3. Acompanhamento</span> – seguimento e suporte pelo WhatsApp.</li>
+            <li><span class="font-medium">1. Triagem</span> – questionário rápido.</li>
+            <li><span class="font-medium">2. Consulta</span> – videochamada e prescrição, se indicado.</li>
+            <li><span class="font-medium">3. Acompanhamento</span> – suporte e ajustes pelo WhatsApp.</li>
           </ol>
-          <a href="#" data-agendar class="mt-6 inline-flex items-center justify-center w-full rounded-2xl bg-emerald-600 px-5 py-3 text-white font-medium shadow hover:bg-emerald-700">Agendar agora</a>
+          <a href="https://calendly.com/slinmex" target="_blank" rel="noopener noreferrer"
+             class="mt-6 inline-flex items-center justify-center w-full rounded-2xl bg-emerald-600 px-5 py-3 text-white font-medium shadow hover:bg-emerald-700">
+            Agendar agora
+          </a>
         </div>
       </div>
     </div>
@@ -128,59 +142,63 @@
     <div class="container mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
       <div>
         <h2 class="text-2xl md:text-3xl font-bold">Atendimento responsável e baseado em evidências</h2>
-        <p class="mt-4 text-slate-600">Somos uma equipe médica focada em saúde metabólica. Toda prescrição é individualizada, considerando histórico, exames e contraindicações. Não realizamos <em>venda direta sem prescrição</em>.</p>
-        <p class="mt-4 text-slate-600">Usamos protocolos seguros, com educação do paciente, manejo de efeitos e metas realistas.</p>
+        <p class="mt-4 text-slate-600">Foco em saúde metabólica. Prescrição individualizada, considerando histórico, exames e contraindicações. Não realizamos <em>venda direta sem prescrição</em>.</p>
+        <p class="mt-4 text-slate-600">Protocolos seguros, educação do paciente, manejo de efeitos e metas realistas.</p>
       </div>
       <div class="glass rounded-3xl p-6 shadow border border-slate-200">
         <h3 class="font-semibold">Indicações e contraindicações (resumo)</h3>
         <ul class="mt-3 text-sm text-slate-700 space-y-2 list-disc list-inside">
           <li>Indicações: obesidade ou sobrepeso com comorbidades, avaliação clínica favorável.</li>
-          <li>Contraindicações: histórico de MTC/Neoplasia endócrina múltipla tipo 2, pancreatite prévia, hipersensibilidade, entre outras.</li>
+          <li>Contraindicações: histórico de MTC/NEM2, pancreatite prévia, hipersensibilidade, entre outras.</li>
           <li>Avaliação médica obrigatória antes do início.</li>
         </ul>
       </div>
     </div>
   </section>
 
-  <!-- Tratamentos (Ozempic / Mounjaro) -->
+  <!-- Tratamentos -->
   <section id="tratamentos" class="py-16 md:py-24 bg-slate-50">
     <div class="container mx-auto px-4">
       <h2 class="text-2xl md:text-3xl font-bold text-center">Tratamentos</h2>
       <p class="mt-3 text-center text-slate-600">Resumo em linguagem simples. As doses são definidas pelo médico para cada pessoa.</p>
 
       <div class="mt-10 grid md:grid-cols-2 gap-6">
-        <!-- Ozempic (Semaglutida) -->
+        <!-- Ozempic -->
         <article class="card rounded-3xl bg-white border border-slate-200 shadow-sm p-6">
-          <div class="flex items-center justify-between">
-            <h3 class="text-xl font-semibold text-slate-900">Ozempic (semaglutida)</h3>
-            <span class="price"><small>consulta a partir de</small> R$&nbsp;—</span>
-          </div>
-          <p class="mt-2 text-sm text-slate-600"><strong>O que é:</strong> um medicamento aplicado <strong>1 vez por semana</strong> que ajuda a reduzir a fome e a controlar a glicose. </p>
-          <p class="mt-2 text-sm text-slate-600"><strong>Para quem serve:</strong> pessoas com obesidade ou sobrepeso (principalmente com comorbidades), após avaliação médica.</p>
-          <p class="mt-2 text-sm text-slate-600"><strong>Efeitos mais comuns:</strong> náusea, sensação de estômago cheio e azia — costumam melhorar com o ajuste de dose e orientações de alimentação.</p>
-          <a data-wa data-wa-text="Tenho interesse em Ozempic" data-wa-campaign="produto-ozempic" target="_blank" rel="noopener noreferrer" class="mt-6 inline-flex rounded-2xl bg-emerald-600 px-4 py-2 text-white text-sm font-medium hover:bg-emerald-700">Falar no WhatsApp</a>
+          <h3 class="text-xl font-semibold text-slate-900">Ozempic (semaglutida)</h3>
+          <p class="mt-3 text-sm text-slate-700"><strong>O que é:</strong> medicamento aplicado <strong>1 vez por semana</strong> que ajuda a reduzir a fome e a controlar a glicose.</p>
+          <p class="mt-2 text-sm text-slate-700"><strong>Para quem serve:</strong> pessoas com obesidade ou sobrepeso (especialmente com comorbidades), após avaliação médica.</p>
+          <p class="mt-2 text-sm text-slate-700"><strong>Efeitos mais comuns:</strong> náusea, sensação de estômago cheio e azia — costumam melhorar com o ajuste de dose e orientações de alimentação.</p>
+          <a href="https://wa.me/5519997223709?text=Tenho%20interesse%20em%20Ozempic&source=site&medium=cta&campaign=produto-ozempic"
+             target="_blank" rel="noopener noreferrer"
+             class="mt-5 inline-flex rounded-2xl bg-emerald-600 px-4 py-2 text-white text-sm font-medium hover:bg-emerald-700">
+            Falar no WhatsApp
+          </a>
         </article>
 
-        <!-- Mounjaro (Tirzepatida) -->
+        <!-- Mounjaro -->
         <article class="card rounded-3xl bg-white border border-slate-200 shadow-sm p-6">
-          <div class="flex items-center justify-between">
-            <h3 class="text-xl font-semibold text-slate-900">Mounjaro (tirzepatida)</h3>
-            <span class="price"><small>consulta a partir de</small> R$&nbsp;—</span>
-          </div>
-          <p class="mt-2 text-sm text-slate-600"><strong>O que é:</strong> medicamento semanal que atua em <strong>dois receptores</strong> do organismo, o que pode oferecer maior potência para algumas pessoas.</p>
-          <p class="mt-2 text-sm text-slate-600"><strong>Para quem serve:</strong> indicado após avaliação clínica, com foco em <strong>perda de peso e controle glicêmico</strong>.</p>
-          <p class="mt-2 text-sm text-slate-600"><strong>Efeitos mais comuns:</strong> semelhantes aos do Ozempic. Ajustes graduais ajudam a tolerar melhor.</p>
-          <a data-wa data-wa-text="Tenho interesse em Mounjaro" data-wa-campaign="produto-mounjaro" target="_blank" rel="noopener noreferrer" class="mt-6 inline-flex rounded-2xl bg-emerald-600 px-4 py-2 text-white text-sm font-medium hover:bg-emerald-700">Falar no WhatsApp</a>
+          <h3 class="text-xl font-semibold text-slate-900">Mounjaro (tirzepatida)</h3>
+          <p class="mt-3 text-sm text-slate-700"><strong>O que é:</strong> medicamento semanal que atua em <strong>dois receptores</strong> do organismo, o que pode oferecer maior potência para algumas pessoas.</p>
+          <p class="mt-2 text-sm text-slate-700"><strong>Para quem serve:</strong> indicado após avaliação clínica, com foco em <strong>perda de peso e controle glicêmico</strong>.</p>
+          <p class="mt-2 text-sm text-slate-700"><strong>Efeitos mais comuns:</strong> semelhantes aos do Ozempic. Ajustes graduais ajudam a tolerar melhor.</p>
+          <a href="https://wa.me/5519997223709?text=Tenho%20interesse%20em%20Mounjaro&source=site&medium=cta&campaign=produto-mounjaro"
+             target="_blank" rel="noopener noreferrer"
+             class="mt-5 inline-flex rounded-2xl bg-emerald-600 px-4 py-2 text-white text-sm font-medium hover:bg-emerald-700">
+            Falar no WhatsApp
+          </a>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- Enzimas (texto leigo + preço) -->
+  <!-- Enzimas -->
   <section id="enzimas" class="py-16 md:py-24">
     <div class="container mx-auto px-4">
       <h2 class="text-2xl md:text-3xl font-bold text-center">Enzimas corporais</h2>
-      <p class="mt-3 text-center text-slate-600 max-w-3xl mx-auto">Aplicações em consultório para ajudar no <strong>contorno corporal</strong> e no alívio de <strong>inchaço</strong>. São combinações de substâncias que estimulam a quebra de gordura em áreas específicas e melhoram a circulação. A indicação é <strong>individual</strong> e feita pelo médico.</p>
+      <p class="mt-3 text-center text-slate-600 max-w-3xl mx-auto">
+        Aplicações em consultório para ajudar no <strong>contorno corporal</strong> e no alívio de <strong>inchaço</strong>. Protocolos que combinam substâncias para estimular a quebra de gordura e melhorar a circulação. Indicação individual feita pelo médico.
+      </p>
 
       <div class="mt-10 grid md:grid-cols-2 gap-6">
         <!-- Adipo Balance -->
@@ -189,13 +207,20 @@
             <h3 class="text-xl font-semibold text-slate-900">Adipo Balance</h3>
             <span class="price" data-price="adipo"></span>
           </div>
-          <p class="mt-2 text-sm text-slate-600">Voltado para <strong>inchaço e sensibilidade</strong> (estágios iniciais de lipedema). Ajuda na <strong>drenagem</strong> e na sensação de peso nas pernas.</p>
+          <p class="mt-2 text-sm text-slate-600">Para quem tem pernas e braços com <strong>inchaço e sensibilidade</strong> (estágios iniciais de lipedema). Ajuda na <strong>drenagem</strong> e na sensação de peso nas pernas.</p>
           <ul class="mt-4 text-sm text-slate-700 space-y-2 list-disc list-inside">
-            <li><span class="font-medium">Como é feito:</span> microaplicações superficiais na região tratada.</li>
-            <li><span class="font-medium">Ritmo:</span> em geral 1 sessão/semana por 8–12 semanas.</li>
-            <li><span class="font-medium">Cuidados:</span> evitar sol/atrito por 48h e usar roupas confortáveis.</li>
+            <li><span class="font-medium">Como é feito:</span> microaplicações superficiais em pontos da região tratada.</li>
+            <li><span class="font-medium">Ritmo:</span> geralmente 1 sessão/semana, por 8–12 semanas.</li>
+            <li><span class="font-medium">Após a sessão:</span> evite sol/atrito por 48 h e use roupas confortáveis.</li>
           </ul>
-          <a data-wa data-wa-text="Tenho interesse no Adipo Balance" data-wa-campaign="enzimas-adipo" target="_blank" rel="noopener noreferrer" class="mt-5 inline-flex rounded-2xl bg-emerald-600 px-4 py-2 text-white text-sm font-medium hover:bg-emerald-700">Comprar pelo WhatsApp</a>
+          <div class="mt-5 flex flex-wrap gap-3">
+            <a href="https://wa.me/5519997223709?text=Tenho%20interesse%20no%20Adipo%20Balance&source=site&medium=cta&campaign=enzimas-adipo"
+               target="_blank" rel="noopener noreferrer"
+               class="rounded-2xl bg-emerald-600 px-4 py-2 text-white text-sm font-medium hover:bg-emerald-700">
+              Comprar pelo WhatsApp
+            </a>
+            <span class="text-xs px-3 py-1 rounded-full bg-slate-100 text-slate-600">Aplicação em consultório</span>
+          </div>
         </article>
 
         <!-- Slim Shape Basis -->
@@ -204,17 +229,51 @@
             <h3 class="text-xl font-semibold text-slate-900">Slim Shape Basis</h3>
             <span class="price" data-price="slim"></span>
           </div>
-          <p class="mt-2 text-sm text-slate-600">Foco em <strong>gordura localizada</strong> (abdômen, flancos, costas). Contribui para o <strong>remodelamento</strong> da área ao longo das sessões.</p>
+          <p class="mt-2 text-sm text-slate-600">Para <strong>gordura localizada</strong> (abdômen, flancos, costas). Ajuda no <strong>remodelamento</strong> da área tratada ao longo das sessões.</p>
           <ul class="mt-4 text-sm text-slate-700 space-y-2 list-disc list-inside">
-            <li><span class="font-medium">Como é feito:</span> microaplicações na camada de gordura da região alvo.</li>
+            <li><span class="font-medium">Como é feito:</span> microaplicações na camada de gordura.</li>
             <li><span class="font-medium">Ritmo:</span> sessões quinzenais por 8–12 semanas, conforme resposta.</li>
-            <li><span class="font-medium">Cuidados:</span> possível sensibilidade local por poucos dias.</li>
+            <li><span class="font-medium">Cuidados:</span> pequenas áreas podem ficar sensíveis/arroxeadas por poucos dias.</li>
           </ul>
-          <a data-wa data-wa-text="Tenho interesse no Slim Shape Basis" data-wa-campaign="enzimas-slim" target="_blank" rel="noopener noreferrer" class="mt-5 inline-flex rounded-2xl bg-emerald-600 px-4 py-2 text-white text-sm font-medium hover:bg-emerald-700">Comprar pelo WhatsApp</a>
+          <div class="mt-5 flex flex-wrap gap-3">
+            <a href="https://wa.me/5519997223709?text=Tenho%20interesse%20no%20Slim%20Shape%20Basis&source=site&medium=cta&campaign=enzimas-slim"
+               target="_blank" rel="noopener noreferrer"
+               class="rounded-2xl bg-emerald-600 px-4 py-2 text-white text-sm font-medium hover:bg-emerald-700">
+              Comprar pelo WhatsApp
+            </a>
+            <span class="text-xs px-3 py-1 rounded-full bg-slate-100 text-slate-600">Aplicação em consultório</span>
+          </div>
         </article>
       </div>
 
-      <p class="mt-6 text-xs text-slate-500">Observação: indicação, número de sessões e intervalos variam conforme avaliação médica. Não fazemos promessas de resultado.</p>
+      <p class="mt-6 text-xs text-slate-500">Observação: indicação, número de sessões e intervalos variam conforme avaliação médica. Não prometemos resultados.</p>
+    </div>
+  </section>
+
+  <!-- Como funciona -->
+  <section id="como-funciona" class="py-16 md:py-24">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-center">Como funciona</h2>
+      <div class="mt-10 grid md:grid-cols-3 gap-6">
+        <div class="rounded-3xl border p-6">
+          <div class="text-sm font-semibold">1) Triagem</div>
+          <p class="mt-2 text-sm text-slate-600">Questionário e documentos de saúde pelo WhatsApp. Verificamos elegibilidade e segurança.</p>
+        </div>
+        <div class="rounded-3xl border p-6">
+          <div class="text-sm font-semibold">2) Consulta</div>
+          <p class="mt-2 text-sm text-slate-600">Videochamada com médico. Se indicado, prescrição digital e instruções de uso.</p>
+        </div>
+        <div class="rounded-3xl border p-6">
+          <div class="text-sm font-semibold">3) Acompanhamento</div>
+          <p class="mt-2 text-sm text-slate-600">Ajustes, manejo de efeitos e metas. Plano de hábitos e suporte contínuo.</p>
+        </div>
+      </div>
+      <div class="text-center mt-8">
+        <a href="https://calendly.com/slinmex" target="_blank" rel="noopener noreferrer"
+           class="inline-flex rounded-2xl bg-emerald-600 px-6 py-3 text-white font-medium hover:bg-emerald-700">
+          Agendar online
+        </a>
+      </div>
     </div>
   </section>
 
@@ -222,54 +281,72 @@
   <section id="planos" class="py-16 md:py-24 bg-slate-50">
     <div class="container mx-auto px-4">
       <h2 class="text-2xl md:text-3xl font-bold text-center">Como trabalhamos</h2>
-      <p class="mt-3 text-center text-slate-600 max-w-3xl mx-auto">Atendemos <strong>online em todo o Brasil</strong> via videochamada. A prescrição é feita <strong>apenas quando clinicamente indicada</strong>. Escolha como prefere seguir.</p>
+      <p class="mt-3 text-center text-slate-600 max-w-3xl mx-auto">Atendemos <strong>online em todo o Brasil</strong>. A prescrição é feita <strong>apenas quando clinicamente indicada</strong>. Opções flexíveis para você escolher como prefere seguir.</p>
 
       <div class="mt-10 grid md:grid-cols-3 gap-6">
         <!-- Consulta online -->
         <article class="card rounded-3xl bg-white border border-slate-200 shadow-sm p-6">
           <div class="flex items-start justify-between gap-4">
-            <h3 class="text-lg font-semibold">Consulta online</h3>
+            <h3 class="text-xl font-semibold text-slate-900">Consulta online</h3>
             <span class="price" data-price="consulta"></span>
           </div>
-          <p class="mt-2 text-sm text-slate-600">Avaliação por videochamada, revisão de exames e plano inicial. Ideal para confirmar indicação e tirar dúvidas.</p>
+          <p class="mt-2 text-sm text-slate-600">Avaliação por videochamada, revisão de exames e plano inicial. Ideal para entender se há indicação de tratamento.</p>
           <ul class="mt-4 text-sm text-slate-700 space-y-2 list-disc list-inside">
             <li>Disponível para todo o Brasil</li>
             <li>Receita digital quando indicado</li>
           </ul>
-          <a href="#" data-agendar class="mt-5 inline-flex rounded-2xl bg-emerald-600 px-4 py-2 text-white text-sm font-medium hover:bg-emerald-700">Agendar consulta</a>
+          <div class="mt-5 flex flex-wrap gap-3">
+            <a href="https://calendly.com/slinmex" target="_blank" rel="noopener noreferrer"
+               class="rounded-2xl bg-emerald-600 px-4 py-2 text-white text-sm font-medium hover:bg-emerald-700">
+              Agendar online
+            </a>
+            <span class="text-xs px-3 py-1 rounded-full bg-slate-100 text-slate-600">Telemedicina</span>
+          </div>
         </article>
 
-        <!-- Combo completo -->
+        <!-- Combo -->
         <article class="card rounded-3xl bg-white border border-slate-200 shadow-sm p-6">
           <div class="flex items-start justify-between gap-4">
-            <h3 class="text-lg font-semibold">Combo</h3>
+            <h3 class="text-xl font-semibold text-slate-900">Combo</h3>
             <span class="price" data-price="combo"></span>
           </div>
-          <p class="mt-2 text-sm text-slate-600">Avaliação + prescrição quando indicada + suporte na aquisição + acompanhamento por mensagens/retornos.</p>
+          <p class="mt-2 text-sm text-slate-600">Para praticidade: avaliação, prescrição quando indicada, suporte na aquisição e acompanhamento por mensagens/retornos.</p>
           <ul class="mt-4 text-sm text-slate-700 space-y-2 list-disc list-inside">
             <li>Medicação <strong>sob prescrição</strong></li>
             <li>Logística com cadeia fria quando aplicável</li>
-            <li>Ajustes conforme resposta</li>
+            <li>Revisões e ajustes conforme resposta</li>
           </ul>
-          <a data-wa data-wa-text="Quero orçamento do Combo" data-wa-campaign="planos-combo" target="_blank" rel="noopener noreferrer" class="mt-5 inline-flex rounded-2xl border px-4 py-2 text-sm font-medium hover:bg-slate-50">Solicitar por WhatsApp</a>
+          <div class="mt-5 flex flex-wrap gap-3">
+            <a href="https://wa.me/5519997223709?text=Quero%20o%20combo%20consulta%20%2B%20medica%C3%A7%C3%A3o%20%2B%20acompanhamento&source=site&medium=cta&campaign=planos-combo"
+               target="_blank" rel="noopener noreferrer"
+               class="rounded-2xl bg-emerald-600 px-4 py-2 text-white text-sm font-medium hover:bg-emerald-700">
+              Pedir orçamento
+            </a>
+            <span class="text-xs px-3 py-1 rounded-full bg-slate-100 text-slate-600">Sob prescrição</span>
+          </div>
         </article>
 
         <!-- Medicação isolada -->
         <article class="card rounded-3xl bg-white border border-slate-200 shadow-sm p-6">
-          <div class="flex items-start justify-between gap-4">
-            <h3 class="text-lg font-semibold">Medicação isolada</h3>
-            <span class="price">Sob prescrição</span>
-          </div>
-          <p class="mt-2 text-sm text-slate-600">Para quem <strong>já é paciente</strong> e possui indicação válida. Enviamos receita e orientamos a compra segura.</p>
+          <h3 class="text-xl font-semibold text-slate-900">Medicação isolada</h3>
+          <span class="price">Sob prescrição</span>
+          <p class="mt-2 text-sm text-slate-600">Para quem <strong>já é paciente</strong> e possui indicação válida. Enviamos receita e orientamos a melhor forma de aquisição segura.</p>
           <ul class="mt-4 text-sm text-slate-700 space-y-2 list-disc list-inside">
             <li>Receita digital válida em todo o Brasil</li>
             <li>Orientação de compra em farmácias regulares</li>
           </ul>
-          <a data-wa data-wa-text="Sou paciente e preciso da renovação" data-wa-campaign="planos-medicacao" target="_blank" rel="noopener noreferrer" class="mt-5 inline-flex rounded-2xl border px-4 py-2 text-sm font-medium hover:bg-slate-50">Solicitar por WhatsApp</a>
+          <div class="mt-5 flex flex-wrap gap-3">
+            <a href="https://wa.me/5519997223709?text=Sou%20paciente%20e%20preciso%20da%20renova%C3%A7%C3%A3o%20da%20medica%C3%A7%C3%A3o&source=site&medium=cta&campaign=planos-medicacao"
+               target="_blank" rel="noopener noreferrer"
+               class="rounded-2xl bg-emerald-600 px-4 py-2 text-white text-sm font-medium hover:bg-emerald-700">
+              Solicitar
+            </a>
+            <span class="text-xs px-3 py-1 rounded-full bg-slate-100 text-slate-600">Pacientes ativos</span>
+          </div>
         </article>
       </div>
 
-      <p class="mt-6 text-xs text-slate-500 text-center">Importante: não realizamos venda direta ao público leigo. A medicação é dispensada apenas mediante <strong>avaliação médica e prescrição</strong>.</p>
+      <p class="mt-6 text-xs text-slate-500 text-center">Importante: não há venda direta ao público leigo. Medicação apenas mediante <strong>avaliação médica e prescrição</strong>.</p>
     </div>
   </section>
 
@@ -280,7 +357,7 @@
       <div class="mt-10 grid md:grid-cols-2 gap-6">
         <details class="rounded-2xl bg-white border p-5">
           <summary class="font-medium cursor-pointer">Posso comprar sem receita?</summary>
-          <p class="mt-3 text-sm text-slate-600">Não. São medicamentos de uso sob prescrição. A indicação depende de avaliação médica e pode não ser adequada para todos.</p>
+          <p class="mt-3 text-sm text-slate-600">Não. São medicamentos de uso sob prescrição. A indicação parte de avaliação médica e pode não ser adequada para todos.</p>
         </details>
         <details class="rounded-2xl bg-white border p-5">
           <summary class="font-medium cursor-pointer">Como é feito o acompanhamento?</summary>
@@ -292,7 +369,7 @@
         </details>
         <details class="rounded-2xl bg-white border p-5">
           <summary class="font-medium cursor-pointer">Há entrega do medicamento?</summary>
-          <p class="mt-3 text-sm text-slate-600">Orientamos aquisição em farmácias com receita digital. Quando aplicável, organizamos logística com cadeia fria.</p>
+          <p class="mt-3 text-sm text-slate-600">Orientamos a compra em farmácias regulares com a receita digital. Quando aplicável, oferecemos logística com cadeia fria.</p>
         </details>
       </div>
     </div>
@@ -302,11 +379,11 @@
   <section id="contato" class="py-16 md:py-24">
     <div class="container mx-auto px-4 text-center">
       <h2 class="text-2xl md:text-3xl font-bold">Pronto para avaliar seu caso?</h2>
-      <p class="mt-3 text-slate-600">Escolha um horário na agenda ou fale com a equipe.</p>
-      <div class="mt-6 flex items-center gap-3 justify-center">
-        <a href="#" data-agendar class="inline-flex items-center gap-2 rounded-2xl bg-emerald-600 px-6 py-3 text-white font-medium shadow hover:bg-emerald-700">Agendar online</a>
-        <a data-wa data-wa-text="Olá, gostaria de agendar minha consulta online" data-wa-campaign="cta-final" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-2xl border px-6 py-3 font-medium hover:bg-slate-50">WhatsApp</a>
-      </div>
+      <p class="mt-3 text-slate-600">Clique e agende sua consulta online.</p>
+      <a href="https://calendly.com/slinmex" target="_blank" rel="noopener noreferrer"
+         class="mt-6 inline-flex items-center gap-2 rounded-2xl bg-emerald-600 px-6 py-3 text-white font-medium shadow hover:bg-emerald-700">
+        Agendar online
+      </a>
       <p class="mt-3 text-xs text-slate-500">Atendimento de segunda a sexta, 08h–18h (horário de Brasília).</p>
     </div>
   </section>
@@ -327,61 +404,24 @@
     <div class="border-t text-center text-xs text-slate-500 py-4">© <span id="ano"></span> Slinmex — Todos os direitos reservados.</div>
   </footer>
 
-  <!-- Calendly + comportamento -->
-  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
   <script>
-    // Ano
-    var anoEl = document.getElementById('ano');
-    if (anoEl) anoEl.textContent = new Date().getFullYear();
+    // Redireciona www → raiz
+    (function(){const h=location.hostname;if(h.startsWith('www.')){location.replace(location.protocol+'//'+h.slice(4)+location.pathname+location.search+location.hash)}})();
+
+    // Ano rodapé
+    const anoEl=document.getElementById('ano'); if(anoEl) anoEl.textContent=new Date().getFullYear();
 
     // Menu mobile
-    var btn = document.getElementById('menuBtn');
-    var menu = document.getElementById('mobileMenu');
-    if (btn && menu) btn.addEventListener('click', function(){ menu.hidden = !menu.hidden; });
+    const btn=document.getElementById('menuBtn'), menu=document.getElementById('mobileMenu');
+    if(btn&&menu){btn.addEventListener('click',()=>menu.hidden=!menu.hidden)}
 
-    // Preços
-    var PRICES = { consulta: 200, adipo: 79.90, slim: 110.00, combo: null };
-    var br = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' });
-    document.querySelectorAll('[data-price]').forEach(function(el){
-      var key = el.getAttribute('data-price');
-      var v = PRICES[key];
-      if (typeof v === 'number') el.textContent = br.format(v);
-      else { el.textContent = 'Consulte'; el.classList.add('bg-emerald-50','text-emerald-700','border','border-emerald-200'); }
-    });
-
-    // WhatsApp
-    var WA_BASE = 'https://wa.me/5519997223709';
-    function buildWa(text, campaign){
-      var p = new URLSearchParams();
-      if (text) p.set('text', text);
-      p.set('source','site'); p.set('medium','cta');
-      if (campaign) p.set('campaign', campaign);
-      return WA_BASE + '?' + p.toString();
-    }
-    document.querySelectorAll('[data-wa]').forEach(function(a){
-      var text = a.getAttribute('data-wa-text') || '';
-      var campaign = a.getAttribute('data-wa-campaign') || '';
-      a.href = buildWa(text, campaign);
-    });
-
-    // Calendly popup – atualizado para o seu link raiz
-    var CALENDLY_URL = "https://calendly.com/slinmex"; // <-- seu link novo
-    function abrirAgendamento(prefill){
-      if (window.Calendly) {
-        var qs = '';
-        if (prefill && (prefill.name || prefill.email)) {
-          var p = new URLSearchParams();
-          if (prefill.name) p.set('name', prefill.name);
-          if (prefill.email) p.set('email', prefill.email);
-          qs = '?' + p.toString();
-        }
-        Calendly.initPopupWidget({ url: CALENDLY_URL + qs });
-      } else {
-        alert('Carregando agenda...');
-      }
-    }
-    document.querySelectorAll('[data-agendar]').forEach(function(el){
-      el.addEventListener('click', function(e){ e.preventDefault(); abrirAgendamento(); });
+    // Preços (somente para itens com data-price)
+    const PRICES={consulta:200, adipo:79.90, slim:110.00, combo:null};
+    const br=new Intl.NumberFormat('pt-BR',{style:'currency',currency:'BRL'});
+    document.querySelectorAll('[data-price]').forEach(el=>{
+      const key=el.getAttribute('data-price'); const v=PRICES[key];
+      if(typeof v==='number') el.textContent=br.format(v);
+      else { el.textContent='Consulte'; el.classList.add('bg-emerald-50','text-emerald-700','border','border-emerald-200'); }
     });
   </script>
 </body>
