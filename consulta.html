@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consulta Médica | Slinmex</title>
+  <meta name="description" content="Agende sua consulta médica humanizada para equilíbrio metabólico. Atendimento online e presencial sob agendamento.">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <header class="text-center py-8 bg-green-200 bg-opacity-20">
+    <h1 class="text-3xl font-bold text-green-700">Consulta Slinmex</h1>
+    <p class="text-lg text-gray-600">Cuidado médico com empatia e foco em saúde integral</p>
+  </header>
+
+  <section class="max-w-4xl mx-auto p-6 text-center">
+    <img src="https://cdn-icons-png.flaticon.com/512/4322/4322991.png" alt="consulta médica" class="w-40 mx-auto mb-4">
+    <h2 class="text-2xl font-semibold text-green-700 mb-3">Agende sua avaliação médica</h2>
+    <p class="mb-4">Durante a consulta, será realizada uma avaliação humanizada, revisão de exames e plano personalizado de cuidados. Nosso objetivo é promover saúde e equilíbrio.</p>
+    <button onclick="document.getElementById('modal').classList.remove('hidden')" class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition">Ver valor e agendar</button>
+  </section>
+
+  <footer class="text-center py-6 text-sm text-gray-600">
+    <p>Solicitação de exames laboratoriais sob critério médico.</p>
+    <p>Atendimento com foco em avaliação clínica completa.</p>
+    <p>Consultas online e presenciais sob agendamento.</p>
+  </footer>
+
+  <div id="modal" class="hidden fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+    <div class="bg-white rounded-xl shadow-lg p-6 max-w-sm text-center">
+      <h3 class="text-lg font-semibold text-green-700 mb-2">Valor da consulta</h3>
+      <p class="text-gray-700 mb-4">A consulta tem valor de <strong>R$300</strong> e inclui avaliação médica completa e, quando necessário, solicitação de exames laboratoriais.</p>
+      <a href="https://wa.me/5599999999999" class="inline-block bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700">Agendar no WhatsApp</a>
+      <button onclick="document.getElementById('modal').classList.add('hidden')" class="block mt-3 text-gray-500 hover:underline mx-auto">Voltar</button>
+    </div>
+  </div>
+</body>
+</html>
