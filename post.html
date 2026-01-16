@@ -1,0 +1,12 @@
+<!doctype html><html lang="pt-br"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Artigo • Slinmex</title><link rel="icon" href="/assets/favicon.png"><link rel="stylesheet" href="/styles.css"></head><body>
+<header class="header"><div class="container nav"><a href="/" class="brand"><picture><source srcset="/assets/logo-sx-dark.png" media="(prefers-color-scheme: dark)"><img src="/assets/logo-sx-light.png" alt="Slinmex"></picture><span class="brand-name">Slinmex</span></a><nav class="menu"><a href="/">Início</a><a href="/blog.html">Vida mais saudável</a></nav></div></header>
+<main class="container" style="padding:24px 0"><article id="article"></article></main>
+<footer class="footer"><div class="container"><small>© <span id="year"></span> Slinmex</small></div></footer>
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+const POSTS={'avaliacao-online-emagrecimento':{title:'Avaliação médica online para emagrecimento: quando faz sentido?',cover:'/assets/hero-2.jpg',html:`<p>Uma boa avaliação começa pela escuta…</p>`}};
+const qs=new URLSearchParams(location.search);const slug=qs.get('slug');const p=POSTS[slug];const el=document.getElementById('article');
+if(!p){el.innerHTML='<p>Artigo não encontrado.</p>'} else {el.innerHTML=`<h1 style="color:#0f2c2a">${p.title}</h1><img src="${p.cover}" alt="${p.title}" style="width:100%;border-radius:14px;margin:10px 0 16px"><div class="content">${p.html}</div>`;}
+</script></body></html>

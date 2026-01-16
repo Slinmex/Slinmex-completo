@@ -1,0 +1,73 @@
+/* ================================
+   SLINMEX - Estilo Principal (revigorado)
+   Paleta com mais contraste e vitalidade
+   ================================ */
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;font-family:'Inter','Segoe UI',Arial,sans-serif}
+:root{
+  --primary:#2F8E73;
+  --primary-2:#257A63;
+  --mint:#C4EAD3;
+  --mint-soft:#E9FBF1;
+  --bg:#FAFAFA;
+  --text:#1E293B;
+  --muted:#64748B;
+  --white:#FFFFFF;
+}
+
+body{background:var(--bg);color:var(--text);line-height:1.65}
+.container{max-width:1100px;margin:auto;padding:0 1rem}
+.center{text-align:center}
+.mt-2{margin-top:0.75rem}.mt-3{margin-top:1rem}.mt-4{margin-top:1.5rem}.mt-6{margin-top:2rem}
+
+.topbar{position:sticky;top:0;z-index:999;background:var(--white);border-bottom:1px solid #e5e7eb;padding:.8rem 0}
+.topbar .container{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.logo img{height:40px}
+nav a{margin-left:1rem;text-decoration:none;color:var(--text);font-weight:600}
+nav a:hover{color:var(--primary)}
+
+.hero{padding:5rem 1rem;background:linear-gradient(180deg,var(--mint) 0%,var(--bg) 100%)}
+.hero-content{display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+.hero h1{font-size:2.6rem;color:var(--primary);margin-bottom:.6rem}
+.hero p{max-width:520px;color:var(--muted)}
+.hero-img{max-width:460px;border-radius:20px;box-shadow:0 10px 30px rgba(47,142,115,.18)}
+
+.section{padding:4rem 1rem}
+.bg-light{background:var(--mint-soft)}
+.grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;align-items:start}
+
+.card{background:var(--white);border-radius:16px;padding:1.4rem;box-shadow:0 12px 30px rgba(2,6,23,.06);transition:transform .2s ease,box-shadow .2s ease}
+.card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(2,6,23,.10)}
+.card img{width:100%;border-radius:14px;margin-bottom:1rem}
+
+.btn-primary,.btn-outline{display:inline-block;padding:.9rem 1.6rem;border-radius:12px;text-decoration:none;font-weight:700;letter-spacing:.2px;transition:all .2s ease}
+.btn-primary{background:var(--primary);color:var(--white);box-shadow:0 6px 20px rgba(47,142,115,.24)}
+.btn-primary:hover{background:var(--primary-2)}
+.btn-outline{border:2px solid var(--primary);color:var(--primary);}
+.btn-outline:hover{background:var(--primary);color:var(--white)}
+
+.valor-consulta{font-size:1.2rem;color:var(--primary);margin-top:1rem}
+
+.blog-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.6rem}
+.blog-card{background:var(--white);border-radius:14px;padding:1rem;box-shadow:0 10px 24px rgba(2,6,23,.06);text-align:center}
+.blog-card img{border-radius:12px;margin-bottom:.8rem}
+.blog-card a{text-decoration:none;color:var(--primary);font-weight:700}
+
+.blog-article{max-width:760px;margin:auto;font-size:1.06rem}
+.blog-article h1,.blog-article h2,.blog-article h3{color:var(--primary);margin:1.2rem 0 .6rem}
+.blog-article blockquote{border-left:4px solid var(--primary);padding-left:1rem;margin:1rem 0;color:#334155;font-style:italic;background:var(--mint-soft)}
+
+footer{background:var(--primary);color:var(--white);padding:2rem 1rem;text-align:center;margin-top:2rem}
+footer small{display:block;margin-top:.4rem;font-size:.9rem}
+
+@media(max-width:768px){
+  .hero-content{flex-direction:column;text-align:center}
+  nav{display:none}
+}
+@media(prefers-color-scheme:dark){
+  body{background:#0f172a;color:#e7eaee}
+  .topbar{background:#111827;border-bottom:1px solid #0b1220}
+  .card,.blog-card{background:#0b1220}
+  footer{background:#0b1220}
+  .hero{background:linear-gradient(180deg,#153c33 0%,#0f172a 100%)}
+}

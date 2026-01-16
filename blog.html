@@ -1,0 +1,22 @@
+<!doctype html><html lang="pt-br"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Slinmex • Vida mais saudável</title>
+<link rel="icon" href="/assets/favicon.png"><link rel="stylesheet" href="/styles.css"></head><body>
+<header class="header"><div class="container nav">
+  <a href="/" class="brand"><picture><source srcset="/assets/logo-sx-dark.png" media="(prefers-color-scheme: dark)"><img src="/assets/logo-sx-light.png" alt="Slinmex"></picture><span class="brand-name">Slinmex</span></a>
+  <nav class="menu"><a href="/">Início</a><a href="/blog.html" class="btn">Vida mais saudável</a><a data-wa class="btn" href="#" target="_blank">WhatsApp</a></nav>
+</div></header>
+<main class="container" style="padding:24px 0">
+  <h1 style="margin:0 0 10px">Vida mais saudável</h1>
+  <p style="margin:0 0 20px">Artigos curtos e práticos sobre hábitos, exames quando indicados e acompanhamento médico.</p>
+  <div class="post-list" id="posts"></div>
+</main>
+<footer class="footer"><div class="container"><small>© <span id="year"></span> Slinmex — Conteúdo educativo. Não substitui consulta médica.</small></div></footer>
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+const posts=[{slug:'avaliacao-online-emagrecimento',title:'Avaliação médica online para emagrecimento: quando faz sentido?',cover:'/assets/hero-2.jpg',html:`<p>Uma boa avaliação começa pela escuta. Histórico, exames quando indicados e metas realistas ajudam a definir o plano.</p><ul><li>Pré‑consulta com dados básicos</li><li>Videochamada</li><li>Se indicado, receita digital e orientações</li><li>Acompanhamento com ajustes</li></ul>`}];
+const grid=document.getElementById('posts');
+posts.forEach(p=>{const card=document.createElement('article');card.className='post';card.innerHTML=`<img src="${p.cover}" alt="${p.title}"><div class="p"><h3>${p.title}</h3><a class="btn" href="/post.html?slug=${p.slug}">Ler artigo</a></div>`;grid.appendChild(card);});
+</script>
+<script src="/app.js"></script>
+</body></html>

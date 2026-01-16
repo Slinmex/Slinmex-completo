@@ -1,38 +1,87 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!doctype html>
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Consulta Médica | Slinmex</title>
-  <meta name="description" content="Agende sua consulta médica humanizada para equilíbrio metabólico. Atendimento online e presencial sob agendamento.">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Agendar Consulta | Slinmex</title>
+  <meta name="description" content="Agende sua avaliação médica humanizada com a Slinmex. Consultas online e acompanhamento clínico completo." />
+  <meta name="theme-color" content="#2F8E73" />
+  <link rel="canonical" href="https://www.slinmex.com.br/consulta.html" />
+
+  <!-- Google Tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17693917991"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17693917991');
+  </script>
+
+  <link rel="icon" href="/public/assets/img/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="/public/style.css" />
+  <script src="/public/main.js" defer></script>
 </head>
-<body class="bg-gray-50 text-gray-800">
-  <header class="text-center py-8 bg-green-200 bg-opacity-20">
-    <h1 class="text-3xl font-bold text-green-700">Consulta Slinmex</h1>
-    <p class="text-lg text-gray-600">Cuidado médico com empatia e foco em saúde integral</p>
+
+<body>
+  <header class="topbar">
+    <div class="container">
+      <a href="/" class="logo">
+        <picture>
+          <source srcset="/public/assets/img/logo-escuro.png" media="(prefers-color-scheme: dark)">
+          <img src="/public/assets/img/logo-claro.png" alt="Slinmex logo" height="40">
+        </picture>
+      </a>
+      <nav>
+        <a href="/">Início</a>
+        <a href="/blog/">Blog</a>
+      </nav>
+    </div>
   </header>
 
-  <section class="max-w-4xl mx-auto p-6 text-center">
-    <img src="https://cdn-icons-png.flaticon.com/512/4322/4322991.png" alt="consulta médica" class="w-40 mx-auto mb-4">
-    <h2 class="text-2xl font-semibold text-green-700 mb-3">Agende sua avaliação médica</h2>
-    <p class="mb-4">Durante a consulta, será realizada uma avaliação humanizada, revisão de exames e plano personalizado de cuidados. Nosso objetivo é promover saúde e equilíbrio.</p>
-    <button onclick="document.getElementById('modal').classList.remove('hidden')" class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition">Ver valor e agendar</button>
+  <section class="hero small">
+    <div class="container center">
+      <h1>Agende sua consulta médica</h1>
+      <p>Atendimento online e humanizado, com foco em saúde metabólica e bem-estar.</p>
+      <button id="verValor" class="btn-outline mt-3">Ver valor da consulta</button>
+      <p id="valorConsulta" class="valor-consulta" style="display:none;">💰 Valor da consulta: <strong>R$300,00</strong></p>
+      <a href="https://wa.me/5519997223709?text=Olá! Gostaria de agendar uma consulta médica." class="btn-primary mt-3" target="_blank">Agendar via WhatsApp</a>
+    </div>
   </section>
 
-  <footer class="text-center py-6 text-sm text-gray-600">
-    <p>Solicitação de exames laboratoriais sob critério médico.</p>
-    <p>Atendimento com foco em avaliação clínica completa.</p>
-    <p>Consultas online e presenciais sob agendamento.</p>
+  <section class="section">
+    <div class="container center">
+      <h2>Como funciona a consulta?</h2>
+      <ul class="steps">
+        <li>✅ Atendimento online, com horário agendado.</li>
+        <li>✅ Avaliação médica humanizada, considerando todo seu histórico.</li>
+        <li>✅ Prescrição e solicitação de exames conforme necessidade clínica.</li>
+        <li>✅ Acompanhamento contínuo via WhatsApp.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section bg-light">
+    <div class="container center">
+      <h2>Informações Importantes</h2>
+      <p>O pagamento da consulta é realizado antes do atendimento. Após confirmação, você receberá o link para agendamento e a orientação médica completa.</p>
+      <a href="/" class="btn-outline mt-3">Voltar ao Início</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer">
+      <p><strong>Slinmex</strong> – Atendimento médico humanizado<br>
+      © <span id="ano"></span> Todos os direitos reservados.</p>
+      <small>Solicitação de exames laboratoriais sob critério médico.</small>
+    </div>
   </footer>
 
-  <div id="modal" class="hidden fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center">
-    <div class="bg-white rounded-xl shadow-lg p-6 max-w-sm text-center">
-      <h3 class="text-lg font-semibold text-green-700 mb-2">Valor da consulta</h3>
-      <p class="text-gray-700 mb-4">A consulta tem valor de <strong>R$300</strong> e inclui avaliação médica completa e, quando necessário, solicitação de exames laboratoriais.</p>
-      <a href="https://wa.me/5599999999999" class="inline-block bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700">Agendar no WhatsApp</a>
-      <button onclick="document.getElementById('modal').classList.add('hidden')" class="block mt-3 text-gray-500 hover:underline mx-auto">Voltar</button>
-    </div>
-  </div>
+  <script>
+    document.getElementById("ano").textContent = new Date().getFullYear();
+    document.getElementById("verValor").addEventListener("click", function() {
+      document.getElementById("valorConsulta").style.display = "block";
+      this.style.display = "none";
+    });
+  </script>
 </body>
 </html>
